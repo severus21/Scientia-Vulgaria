@@ -1,21 +1,3 @@
-Scientia-Vulgaria
-=================
-
-Les dossiers de scripts : Web/Scripts c'est plus ou moins le bordel aucune orgnisation jsute le minimun pr que ça fct (ie je ne supporte pas je JS)
-Evite de regarder le fichier Sort.php ... l'implementation des tris laisse à désirer tjs pas réécrit.
-
-Pour info : 
-	Le dossier Web est considéré comme dossier racine par le serveur Apache, les requêtes sont redirigées par défaut sous frontend.php.
-Dans la lib tu trouve mon framwork + des bouts des appli (objet  à mon sens :) image, video etc ..).
-	Les class de torrents, tracker et de mail ne sont pas à moi(la flemme de réécrire des trucs déjà bien fait où il faut uniquement suivre des standards surtout les mails.
-
-Après il y a des bouts que j'ai oublié ... J'écrirai bientôt une specification générale de l'architecture
-
-
-Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
-
-================
-
 1.General
 	Applications/
 	Cache/

@@ -1,0 +1,26 @@
+Structure module:
+	-Lib :
+		-Models :(opt)
+			Objects
+				-$Module+.class.php
+				-*
+			Records			
+				-$Module+Record.class.php
+				-*
+			Managers			
+				-$Module+Manager.class.php
+				-*
+			
+		-FormBuilder(opt)
+		-NavBuilder
+		-PaginationBuilder(opt)
+		-RequeteBuilder(opt)
+		
+	-Views :
+		-*
+		
+	-$Module+Controller.class.php
+	-$module.sql
+	-config.xml
+	-install.sh
+
