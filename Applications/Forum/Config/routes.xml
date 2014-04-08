@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+	<route url="/forum(:?/)?(:?index)?" module="Forum_Index" action="index"/>
+	
+	<route url="/forum/forum/index-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="Forum_Forum" action="index" vars="id"/>
+	
+	<route url="/forum/topic/insert-([0-9]+)" module="Forum_Topic" action="insert" vars="id"/>
+	<route url="/forum/topic/insert-index-([0-9]+)" module="Forum_Topic" action="insertIndex" vars="id"/>
+	<route url="/forum/topic/delete-([0-9]+)" module="Forum_Topic" action="delete" vars="id"/>
+	<route url="/forum/topic/update-index-([0-9]+)" module="Forum_Topic" action="updateIndex" vars="id"/>
+	<route url="/forum/topic/update-([0-9]+)" module="Forum_Topic" action="update" vars="id"/>
+	<route url="/forum/topic/show-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="Forum_Topic" action="show" vars="id"/>
+	
+	<route url="/forum/post/insert-([0-9]+)" module="Forum_Post" action="insert" vars="id"/>
+	<route url="/forum/post/insert-index-([0-9]+)" module="Forum_Post" action="insertIndex" vars="id"/>
+	<route url="/forum/post/delete-([0-9]+)" module="Forum_Post" action="delete" vars="id"/>
+	<route url="/forum/post/update-index-([0-9]+)" module="Forum_Post" action="updateIndex" vars="id"/>
+	<route url="/forum/post/update-([0-9]+)" module="Forum_Post" action="update" vars="id"/>
+	
+</routes>

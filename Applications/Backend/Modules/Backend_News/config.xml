@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="news">
+	<action name="delete">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-delete">
+				<string lang="fr" value="Suppression effectuée"/>
+			</flash>
+		</flashs>
+	</action>
+	
+	<action name="update">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-file-update">
+				<string lang="fr" value="Fichier video mis à jour."/>
+			</flash>
+		</flashs>
+	</action>
+
+	<action name="all">
+		<!--JS-->
+		<js src="/Scripts/multi_file_upload.js"/>
+		<!--Variables-->
+		<definitions>	
+			<define var="index-cache-depth" value="10"/>
+			
+			<define var="mosaique-nbrObjectsPerPage" value="30"/>
+			<define var="mosaique-nbrSelectablePages" value="11"/>
+			
+			<define var="table-nbrObjectsPerPage" value="100"/>
+			<define var="table-nbrSelectablePages" value="11"/>
+		</definitions>
+		<!--Message-->
+		<flashs>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="result-search-empty">
+				<string lang="fr" value="Aucun news de correspond à votre requête"/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer ce news"/>
+			</flash>
+		</flashs>
+		<!--Menu-->
+		<menus>
+			<nav var="topNewsNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+			<nav var="topNewsNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topNewsNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topNewsNav-update">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+			<nav var="topNewsNav-delete">
+				<string lang="fr" value="Supprimer"/>
+			</nav>
+		</menus>
+		<!--Form-->
+		<form>
+			<fields>
+				<field var="text">
+					<string lang="fr" value="Texte (anglais uniquement):"/>
+				</field>
+				<field var="app">
+					<string lang="fr" value="Application :"/>
+				</field>
+				<field var="accreditation">
+					<string lang="fr" value="Accreditation :"/>
+				</field>
+				<field var="statut">
+					<string lang="fr" value="Statut :"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="text">
+					<string lang="fr" value="Doit être une chaine de caractères non vide de taille max : 30000car"/>
+				</tooltip>
+				<tooltip var="app">
+					<string lang="fr" value="Doit être une chaine de caractères non vide de taille max : 256car"/>
+				</tooltip>
+			</tooltips>
+		</form>
+		<!--Pagination-->
+		<pagination>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucun résultat ne correspond à votre recherche"/>
+			</msg>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucun résultat ne correspond à votre recherche"/>
+			</msg>
+			<msg var="table-th-nbr">
+				<string lang="fr" value="Nbr"/>
+			</msg>
+			<msg var="table-th-login">
+				<string lang="fr" value="Auteur"/>
+			</msg>
+			<msg var="table-th-accreditation">
+				<string lang="fr" value="Accreditation"/>
+			</msg>
+			<msg var="table-th-app">
+				<string lang="fr" value="Application"/>
+			</msg>
+			<msg var="table-th-statut">
+				<string lang="fr" value="Statut"/>
+			</msg>
+			<msg var="table-th-date">
+				<string lang="fr" value="Date"/>
+			</msg>
+		</pagination>
+		<!--View-->
+		<views>
+			<view var="size">
+				<string lang="fr" value="Poids"/>
+			</view>
+			<view var="format">
+				<string lang="fr" value="Format"/>
+			</view>
+			<view var="acteurs">
+				<string lang="fr" value="Acteurs"/>
+			</view>
+			<view var="realisateur">
+				<string lang="fr" value="Réalisateur"/>
+			</view>
+			<view var="categorie">
+				<string lang="fr" value="Categorie"/>
+			</view>
+			<view var="langue">
+				<string lang="fr" value="Langue"/>
+			</view>
+			<view var="subtitle">
+				<string lang="fr" value="Soustitre"/>
+			</view>
+			<view var="date">
+				<string lang="fr" value="Date de sortie"/>
+			</view>
+			<view var="saga">
+				<string lang="fr" value="Saga"/>
+			</view>
+			<view var="resume">
+				<string lang="fr" value="Résumé"/>
+			</view>
+			<view var="title-info-gen">
+				<string lang="fr" value="Informations générales"/>
+			</view>
+			<view var="title-info-file">
+				<string lang="fr" value="Informations relatives aux fichiers"/>
+			</view>
+			<view var="title-related-news">
+				<string lang="fr" value="Newss similaires"/>
+			</view>
+			<view var="resolution">
+				<string lang="fr" value="Résolution"/>
+			</view>
+			<view var="default-video-empty">
+				<string lang="fr" value="Aucune video disponible pour ce news"/>
+			</view>
+		</views>
+		<pagination>
+			<msg var="table-th-updatelink">
+				<string lang="fr" var="Modifier"/>
+			</msg>
+			<msg var="table-th-text">
+				<string lang="fr" var="Contenu"/>
+			</msg>
+			<msg var="table-th-deletelink">
+				<string lang="fr" var="Suppr"/>
+			</msg>
+		</pagination>
+		<!--Css-->
+		<css src="/Css/news-default.css"/>
+	</action>
+	<action name="show">
+		<pagination>
+			<msg var="default-related-empty">
+				<string lang="fr" value="Aucun news lié"/>
+			</msg>
+		</pagination>
+	</action>
+</module>

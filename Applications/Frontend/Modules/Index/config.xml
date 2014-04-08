@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="index">
+	<action name="all">
+		<css src="Css/index-default.css"/>
+	</action>
+
+	<action name="index">
+	</action>
+</module>

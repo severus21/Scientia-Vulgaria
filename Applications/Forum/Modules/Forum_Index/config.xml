@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<general>
+	<action name="all">
+		<msgs>
+			<msg var="">
+				<string lang="fr" value=""/>
+			</msg>
+		</msgs>
+		<views>
+			<view var="last-post-index">
+				<string lang="fr" value="Dernier message"/>
+			</view>
+			<view var="">
+				<string lang="" value=""/>
+			</view>
+		</views>
+	</action>
+</general>

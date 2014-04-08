@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="backend_Categorie">
+	<action name="all">
+		<defines>
+			<define var="table-nbrObjectsPerPage" value="100"/>
+			<define var="table-nbrSelectablePages" value="11"/>
+		</defines>
+		<!--Message-->
+		<flashs>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer ce news"/>
+			</flash>
+		</flashs>
+		<!--Formulaire-->
+		<form>
+			<fields>
+				<field var="lang">
+					<string lang="fr" value="Langue :"/>
+				</field>
+				<field var="table">
+					<string lang="fr" value="Table :"/>
+				</field>
+				<field var="nom">
+					<string lang="fr" value="Nom :"/>
+				</field>
+				<field var="value">
+					<string lang="fr" value="Valeur:"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="lang">
+					<string lang="fr" value="Langue inconnue"/>
+				</tooltip>
+				<tooltip var="table">
+					<string lang="fr" value="Table inconnue"/>
+				</tooltip>
+				<tooltip var="nom">
+					<string lang="fr" value="256 caractères max, champrequis"/>
+				</tooltip>
+				<tooltip var="value">
+					<string lang="fr" value="256 caractères max, champrequis"/>
+				</tooltip>
+			</tooltips>
+		</form>
+		<!--Pagination-->
+		<pagination>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucune categoriee trouéve"/>
+			</msg>
+			<msg var="table-th-nom-def">
+				<string lang="fr" value="Nom(fr)"/>
+			</msg>
+			<msg var="table-th-value-def">
+				<string lang="fr" value="Value(fr)"/>
+			</msg>
+			<msg var="table-th-nom">
+				<string lang="fr" value="Nom"/>
+			</msg>
+			<msg var="table-th-value">
+				<string lang="fr" value="Valeur"/>
+			</msg>
+			<msg var="table-th-updatelink">
+				<string lang="fr" value="Update"/>
+			</msg>
+			<msg var="table-th-deletelink">
+				<string lang="fr" value="Delete"/>
+			</msg>
+			<msg var="unknow-categorie">
+				<string lang="fr" value="Categorie non spécifiée ou inconnue"/>
+			</msg>
+		</pagination>
+		<!-- Navs -->
+		<navs>
+			<nav var="topCategorieNav-insert">
+				<string lang="fr" value="Add"/>
+			</nav>
+			<nav var="topCategorieNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+		</navs>
+	</action>
+</module>

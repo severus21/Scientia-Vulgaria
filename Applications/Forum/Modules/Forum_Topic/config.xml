@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<general>
+	<action name="all">
+		<definitions>
+			<define var="table-nbrObjectsPerPage" value="25"/>
+			<define var="table-nbrSelectablePages" value="5"/>
+			
+			<!--Affichage des posts-->
+			<define var="mosaique-nbrObjectsPerPage" value="20"/>
+			<define var="mosaique-nbrSelectablePages" value="5"/>
+		</definitions>
+		<flashs>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation d'accéder à cette page"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Champs invalids"/>
+			</flash>
+			<flash var="mysql-record-failed">
+				<string lang="fr" value="Erreur lors de l'enregistrement en bas de donnée,
+				 veuillez contacter l'administrateur si le problème persiste"/>
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé."/>
+			</flash>
+			<flash var="delete-sucessful">
+				<string lang="fr" value="Suppression effectuée."/>
+			</flash>
+		</flashs>
+		<!--Pagination-->
+		<pagination>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucun résultat ne correspond à votre recherche"/>
+			</msg>
+		</pagination>
+		<form>
+			<fields>
+				<field var="titre">
+					<string lang="fr" value="Titre :"/>
+				</field>
+				<field var="langue">
+					<string lang="fr" value="Langue :"/>
+				</field>
+				<field var="text">
+					<string lang="fr" value="Texte :"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="titre">
+					<string lang="fr" value="Doit être une chaine de caractères non vide de taille max : 60car"/>
+				</tooltip>
+				<tooltip var="langue">
+					<string lang="fr" value="Langue inconnue"/>
+				</tooltip>
+				<tooltip var="text">
+					<string lang="fr" value="Doit être une chaine de caractères non vide de taille max : 30000car"/>
+				</tooltip>
+			</tooltips>
+		</form>
+		<navs>
+			<nav var="topTopicNav-insert">
+				<string lang="fr" value="Add topic"/>
+			</nav>
+			<nav var="topTopicNav-update">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+			<nav var="topTopicNav-delete">
+				<string lang="fr" value="Supprimer"/>
+			</nav>
+			<nav var="topTopicNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+		</navs>
+		
+		<css src="/Css/topic-default.css"/>
+	</action>
+
+</general>

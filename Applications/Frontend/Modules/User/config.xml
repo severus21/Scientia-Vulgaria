@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="user">
+	<action name="all">
+		<!--Formulaire-->
+		<form>
+			<fields>
+				<!--Accreditation -->
+					<field var="a1">
+						<string lang="fr" value="Standarde"/>
+					</field>
+					<field var="a3">
+						<string lang="fr" value="Inititée"/>
+					</field>
+				<!--Statut -->
+					<field var="s1">
+						<string lang="fr" value="Visiteur"/>
+					</field>
+					<field var="s3">
+						<string lang="fr" value="Membre"/>
+					</field>
+					<field var="s5">
+						<string lang="fr" value="Moderateur"/>
+					</field>
+					<field var="s7">
+						<string lang="fr" value="Administrateur"/>
+					</field>
+				
+				<!--Other -->
+				<field var="login">
+					<string lang="fr" value="Identifiant :"/>
+				</field>
+				<field var="password">
+					<string lang="fr" value="Mot de passe :"/>
+				</field>
+				<field var="password2">
+					<string lang="fr" value="Confirmation :"/>
+				</field>
+				<field var="nom">
+					<string lang="fr" value="Nom :"/>
+				</field>
+				<field var="prenom">
+					<string lang="fr" value="Prénom :"/>
+				</field>
+				<field var="anniversaire">
+					<string lang="fr" value="Date de naissance :"/>
+				</field>
+				<field var="email">
+					<string lang="fr" value="Adresse mail :"/>
+				</field>
+				<field var="captcha">
+					<string lang="fr" value="Code de sécurité"/>
+				</field>
+				<field var="new-email">
+					<string lang="fr" value="Nouvelle adresse mail"/>
+				</field>
+				<field var="new-password">
+					<string lang="fr" value="Nouveau mot de passe"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="login">
+					<string lang="fr" value="Seul les caractères : a-zA-Z0-9_@ sont autorisés,  4 à 20 caractères"/>
+				</tooltip>
+				<tooltip var="password">
+					<string lang="fr" value="Seul les caractères : a-zA-Z0-9_@ sont autorisés,  4 à 30 caractères"/>
+				</tooltip>
+				<tooltip var="password2">
+					<string lang="fr" value="Les mots de passe ne correspondent pas"/>
+				</tooltip>
+				<tooltip var="nom">
+					<string lang="fr" value="Seul les caractères : a-zA-Z`- sont autorisés,  3 à 20 caractères"/>
+				</tooltip>
+				<tooltip var="prenom">
+					<string lang="fr" value="Seul les caractères : a-zA-Z`- sont autorisés,  3 à 20 caractères"/>
+				</tooltip>
+				<tooltip var="anniversaire">
+					<string lang="fr" value="Format AAAA-MM-JJ 1993-01-13"/>
+				</tooltip>
+				<tooltip var="email">
+					<string lang="fr" value="Format adresse mail invalide"/>
+				</tooltip>
+				<tooltip var="captcha">
+					<string lang="fr" value="Code invalide"/>
+				</tooltip>
+			</tooltips>
+		</form>
+		<!--Message-->
+		<flashs>
+			<flash var="unknow-mail">
+				<string lang="fr" value="Mail inconnu"/>
+			</flash>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value=""/>
+			</flash>
+			<flash var="password-not-match">
+				<string lang="fr" value="Les mots de passe de correspondent pas."/>
+			</flash>
+			<flash var="successful-connexion">
+				<string lang="fr" value="Connexion efféctuée"/>
+			</flash>
+			<flash var="invalid-password">
+				<string lang="fr" value="Mot de passe invalide"/>
+			</flash>
+			<flash var="invalid-login">
+				<string lang="fr" value="Identifiant invalide"/>
+			</flash>
+			<flash var="successful-delete">
+				<string lang="fr" value="Suppression du compte effectuée"/>
+			</flash>	
+			<flash var="successful-deconnexion">
+				<string lang="fr" value="Deconnexion efféctuée! A bientôt"/>
+			</flash>
+		</flashs>
+		<!--Menu-->
+		<navs>
+			<nav var="topUserNav-profile">
+				<string lang="fr" value="Profile"/>
+			</nav>
+			<nav var="topUserNav-update-modify">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+		</navs>
+		<!--Css-->
+		<css src="/Css/user-default.css"/>
+	</action>
+
+	<action name="passwordForgotten">
+		<flashs>
+			<flash var="send-mail-failed">
+				<string lang="fr" value="Echec lors de l'envoi du mail"/>
+			</flash>
+			<flash var="successful-mail-send">
+				<string lang="fr" value="Nouveau mot de passe envoyé"/>
+			</flash>
+		</flashs>
+		<views>
+			<view var="mail-subject">
+				<string lang="" value=""/>
+			</view>
+			<view var="mail-begin-bodyhtml">
+				<string lang="" value=""/>
+			</view>
+			<view var="mail-end-bodyhtml">
+				<string lang="" value=""/>
+			</view>
+			<view var="mail-begin-body">
+				<string lang="" value=""/>
+			</view>
+			<view var="mail-end-body">
+				<string lang="" value=""/>
+			</view>
+		</views>
+	</action>
+
+</module>

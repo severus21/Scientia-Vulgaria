@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="backend_Cache">
+	<action name="all">
+		<!--Formulaire-->
+		<form>
+			<fields>
+				<field>
+					<string lang="" value=""/>
+				</field>
+			</fields>
+			<tooltips>
+			</tooltips>
+		</form>
+		<flashs>
+			<flash var="drop-cache-done">
+				<string lang="fr" value="Suppression du cache disque effectuée." />
+			</flash>
+			<flash var="drop-memcache-done">
+				<string lang="fr" value="Suppression du cache memcache effectuée." />
+			</flash>
+			<flash var="unset-cache-done">
+				<string lang="fr" value="Suppression efféctuée." />
+			</flash>
+			<flash var="">
+				<string lang="fr" value="" />
+			</flash>
+		</flashs>
+		<navs>
+			<nav var="topBackend_CacheNav-list-hard">
+				<string lang="fr" value="Detail disque"/>
+			</nav>
+			<nav var="topBackend_CacheNav-drop-men">
+				<string lang="fr" value="Vider RAM"/>
+			</nav>
+			<nav var="topBackend_CacheNav-drop-hard">
+				<string lang="fr" value="Vider Disque"/>
+			</nav>
+		</navs>
+		<views>
+			<view var="name">
+				<string lang="fr" value="Nom :"/>
+			</view>
+			<view var="size">
+				<string lang="fr" value="Poids :"/>
+			</view>
+		</views>
+	</action>
+	
+	<action name="index">
+		<views>
+			<view var="size">
+				<string lang="fr" value="Espace utilisé :"/>
+			</view>
+			<view var="free-space">
+				<string lang="fr" value="Espace libre :"/>
+			</view>
+			<view var="nbr">
+				<string lang="fr" value="Nbr :"/>
+			</view>
+			<view var="free-size">
+				<string lang="fr" value="Espace libre :"/>
+			</view>
+			<view var="curr_items">
+				<string lang="fr" value="Nbr d'items en cache :"/>
+			</view>
+			<view var="bytes-used">
+				<string lang="fr" value="RAM utilisée :"/>
+			</view>
+			<view var="max-bytes">
+				<string lang="fr" value="RAM max :"/>
+			</view>
+			<view var="version">
+				<string lang="fr" value="Version :"/>
+			</view>
+		</views>
+	</action>
+	
+	<action name="list">
+		<views>
+			<view var="delete-file">
+				<string lang="fr" value="Supprimer le fichier"/>
+			</view>
+			<view var="delete-mod">
+				<string lang="fr" value="Suppr"/>
+			</view>
+			<view var="delete-app">
+				<string lang="fr" value="Suppr"/>
+			</view>
+		</views>
+	</action>
+</module>

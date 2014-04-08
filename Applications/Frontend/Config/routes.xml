@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+<!--
+    <route url="/archive/delete([0-9]+)" module="archive" action="delete" vars="id"/>
+    
+    <route url="/article" module="article" action="index"/>
+    <route url="/article/insert" module="article" action="insert"/>
+    <route url="/article/update-([0-9]+)" module="article" action="update" vars="id"/>
+    <route url="/article/delete-([0-9]+)" module="article" action="delete"/>
+    <route url="/article/langues" module="article" action="indexlangues"/>
+    <route url="/article/langues/([0-9]+)-([a-zA-Za-zA-Z0-9-]+)" module="article" action="showlangues" vars="id"/>
+    <route url="/article/informatique" module="article" action="indexinformatique"/>
+    <route url="/article/informatique/([0-9]+)-([a-zA-Z0-9]+)" module="article" action="showinformatique" vars="id"/>
+    <route url="/article/scienceshumaines" module="article" action="indexscienceshumaines"/>
+    <route url="/article/scienceshumaines/([0-9]+)-([a-zA-Z0-9]+)" module="article" action="showscienceshumaines" vars="id"/>
+    <route url="/article/sciences" module="article" action="indexsciences"/>
+    <route url="/article/sciences/([0-9]+)-([a-zA-Z0-9]+)" module="article" action="showsciences" vars="id"/> -->
+    
+    <route url="/archive/download-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="archive" action="download" vars="id"/>
+    
+    <route url="/audio/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="audio" action="gestion"/> 
+    <route url="/audio/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="audio" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/audio/insert" module="audio" action="insert"/>
+    <route url="/audio/insert-index" module="audio" action="insertIndex"/>
+    <route url="/audio/update-([0-9]+)" module="audio" action="update" vars="id"/>
+    <route url="/audio/update-index-([0-9]+)" module="audio" action="updateIndex" vars="id"/>
+    <route url="/audio/delete-([0-9]+)" module="audio" action="delete" vars="id"/>
+    <route url="/audio/show-([0-9]+)" module="audio" action="show" vars="id"/>
+    
+    
+    
+    <!--<route url="/cours" module="cours" action="index"/>
+    <route url="/cours/insert" module="cours" action="insert"/>
+    <route url="/cours/update-([0-9]+)" module="cours" action="update" vars="id"/>
+    <route url="/cours/delete-([0-9]+)" module="cours" action="delete" vars="id"/>
+    <route url="/cours/langues" module="cours" action="indexlangues"/>
+    <route url="/cours/langues/([0-9]+)-([a-zA-Z0-9]+)" module="cours" action="showlangues" vars="id"/>
+    <route url="/cours/informatique" module="cours" action="indexinformatique"/>
+    <route url="/cours/informatique/([0-9]+)-([a-zA-Z0-9]+)" module="cours" action="showinformatique" vars="id"/>
+    <route url="/cours/scienceshumaines" module="cours" action="indexscienceshumaines"/>
+    <route url="/cours/scienceshumaines/([0-9]+)-([a-zA-Z0-9]+)" module="cours" action="showscienceshumaines" vars="id"/>
+    <route url="/cours/sciences" module="cours" action="indexsciences"/>
+    <route url="/cours/sciences/([0-9]+)-([a-zA-Z0-9]+)" module="cours" action="showsciences" vars="id"/>-->
+    
+    <!--<route url="/dictionnaire/" module="dictionnaire" action="index"/>-->
+    
+    <route url="/document/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="document" action="gestion"/> 
+    <route url="/document/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="document" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/document/insert" module="document" action="insert"/>
+    <route url="/document/insert-index" module="document" action="insertIndex"/>
+    <route url="/document/update-([0-9]+)" module="document" action="update" vars="id"/>
+    <route url="/document/update-index-([0-9]+)" module="document" action="updateIndex" vars="id"/>
+    <route url="/document/delete-([0-9]+)" module="document" action="delete" vars="id"/>
+    <route url="/document/show-([0-9]+)-([0-9a-zA-Z]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="document" action="show" vars="id,type"/>
+    
+    <route url="/ebook/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="ebook" action="gestion"/> 
+    <route url="/ebook/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="ebook" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/ebook/insert" module="ebook" action="insert"/>
+    <route url="/ebook/insert-index" module="ebook" action="insertIndex"/>
+    <route url="/ebook/update-info-([0-9]+)" module="ebook" action="updateInfo" vars="id"/>
+    <route url="/ebook/update-file-([0-9]+)" module="ebook" action="updateFile" vars="id"/>
+    <route url="/ebook/update-miniature-([0-9]+)" module="ebook" action="updateMiniature" vars="id"/>
+    <route url="/ebook/update-index-([0-9]+)" module="ebook" action="updateIndex" vars="id"/>
+    <route url="/ebook/delete-([0-9]+)" module="ebook" action="delete" vars="id"/>
+    <route url="/ebook/download-([0-9]+)\?f=[0-9]+.t=(:?document|torrent)" module="ebook" action="download" vars="id"/>
+    <route url="/ebook/show-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="ebook" action="show" vars="id"/>
+    
+    <route url="/episode/insert-([0-9]+)" module="episode" action="insert" vars="id"/>
+    <route url="/episode/insert-index-([0-9]+)" module="episode" action="insertIndex" vars="id"/>
+    <route url="/episode/update-info-([0-9]+)" module="episode" action="updateInfo" vars="id"/>
+    <route url="/episode/update-file-([0-9]+)" module="episode" action="updateFile" vars="id"/>
+    <route url="/episode/update-index-([0-9]+)" module="episode" action="updateIndex" vars="id"/>
+    <route url="/episode/delete-([0-9]+)" module="episode" action="delete" vars="id"/>
+    <route url="/episode/download-([0-9]+)\?f=[0-9]+.t=(:?video|torrent)" module="episode" action="download" vars="id"/>
+	<route url="/episode/show-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="episode" action="show" vars="id"/>
+    
+    <route url="/erreur/404" module="erreur" action="404"/>
+    <route url="/erreur/507" module="erreur" action="507"/>
+    
+    <route url="/film/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="film" action="gestion"/> 
+    <route url="/film/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="film" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/film/insert" module="film" action="insert"/>
+    <route url="/film/insert-index" module="film" action="insertIndex"/>
+    <route url="/film/update-info-([0-9]+)" module="film" action="updateInfo" vars="id"/>
+    <route url="/film/update-file-([0-9]+)" module="film" action="updateFile" vars="id"/>
+    <route url="/film/update-miniature-([0-9]+)" module="film" action="updateMiniature" vars="id"/>
+    <route url="/film/update-tutoriel-([0-9]+)" module="film" action="updateTutoriel" vars="id"/>
+    <route url="/film/update-index-([0-9]+)" module="film" action="updateIndex" vars="id"/>
+    <route url="/film/delete-([0-9]+)" module="film" action="delete" vars="id"/>
+    <route url="/film/download-([0-9]+)\?f=[0-9]+.t=(:?video|torrent)" module="film" action="download" vars="id"/>
+    <route url="/film/show-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="film" action="show" vars="id"/>
+    
+    <route url="/image/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="image" action="gestion"/>
+    <route url="/image/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="image" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/image/insert" module="image" action="insert"/>
+    <route url="/image/insert-index" module="image" action="insertIndex"/>
+    <route url="/image/update-([0-9]+)" module="image" action="update" vars="id"/>
+    <route url="/image/update-index-([0-9]+)" module="image" action="updateIndex" vars="id"/>
+    <route url="/image/delete-([0-9]+)" module="image" action="delete" vars="id"/>
+    
+    <route url="/(index(/index)?)?" module="index" action="index"/>
+    
+    
+    
+   <!-- 
+    <route url="/membre/membre-([a-zA-Z0-9_@+])()?" module="membre" action="index" />
+    <route url="/membre/updateEmail" module="membre" action="updateEmail"/>
+    <route url="/membre/updatePassword" module="membre" action="updatePassword"/>
+    
+    
+    -->
+ 
+   
+
+    <!--
+    <route url="/photo" module="photo" action="index"/>
+    <route url="/photo/insert-([0-9]+)" module="photo" action="insert" vars="id"/>
+    <route url="/photo/insert-index-([0-9]+)" module="photo" action="insertIndex" vars="id"/>
+    <route url="/photo/download-([0-9]+)" module="photo" action="download" vars="id"/>
+    <route url="/photo/update-([0-9]+)" module="photo" action="update" vars="id"/>
+    <route url="/photo/update-([0-9]+)" module="photo" action="updateIndex" vars="id"/>
+    <route url="/photo/delete-([0-9]+)" module="photo" action="delete" vars="id"/>
+    <route url="/photo/([0-9]+)-([a-zA-Z0-9]+)" module="photo" action="show" vars="id"/>
+    <route url="/photo/mes-albums-photos" module="photo" action="mesPhotos"/>
+    
+    <route url="/news" module="news" action="index"/>
+    <route url="/news/([0-9]+)" module="news" action="show" vars="id"/>
+   
+    <route url="/recherche" module="recherche" action="index"/> -->
+    
+    
+    <!--<route url="/saison/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="saison" action="gestion"/> 
+    <route url="/saison/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="saison" action="index"/> Utilisation de . pour & -->
+    <route url="/saison/insert-([0-9]+)" module="saison" action="insert" vars="id"/>
+    <route url="/saison/insert-index-([0-9]+)" module="saison" action="insertIndex" vars="id"/>
+    <route url="/saison/update-info-([0-9]+)" module="saison" action="updateInfo" vars="id"/>
+    <route url="/saison/update-miniature-([0-9]+)" module="saison" action="updateMiniature" vars="id"/>
+    <route url="/saison/update-index-([0-9]+)" module="saison" action="updateIndex" vars="id"/>
+    <route url="/saison/delete-([0-9]+)" module="saison" action="delete" vars="id"/>
+    <route url="/saison/show-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="saison" action="show" vars="id"/>
+    
+    <route url="/serie/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="serie" action="gestion"/> 
+    <route url="/serie/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="serie" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/serie/insert" module="serie" action="insert"/>
+    <route url="/serie/insert-index" module="serie" action="insertIndex"/>
+    <route url="/serie/update-info-([0-9]+)" module="serie" action="updateInfo" vars="id"/>
+    <route url="/serie/update-miniature-([0-9]+)" module="serie" action="updateMiniature" vars="id"/>
+    <route url="/serie/update-index-([0-9]+)" module="serie" action="updateIndex" vars="id"/>
+    <route url="/serie/delete-([0-9]+)" module="serie" action="delete" vars="id"/>
+    <route url="/serie/show-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="serie" action="show" vars="id"/>
+    
+    <route url="/software/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="software" action="gestion"/> 
+    <route url="/software/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="software" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/software/insert" module="software" action="insert"/>
+    <route url="/software/insert-index" module="software" action="insertIndex"/>
+    <route url="/software/update-info-([0-9]+)" module="software" action="updateInfo" vars="id"/>
+    <route url="/software/update-file-([0-9]+)" module="software" action="updateFile" vars="id"/>
+    <route url="/software/update-miniature-([0-9]+)" module="software" action="updateMiniature" vars="id"/>
+    <route url="/software/update-tutoriel-([0-9]+)" module="software" action="updateTutoriel" vars="id"/>
+    <route url="/software/update-index-([0-9]+)" module="software" action="updateIndex" vars="id"/>
+    <route url="/software/delete-([0-9]+)" module="software" action="delete" vars="id"/>
+    <route url="/software/download-([0-9]+)\?f=[0-9]+.t=(:?archive|document|torrent)" module="software" action="download" vars="id"/>
+    <route url="/software/show-([0-9]+)(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="software" action="show" vars="id"/>
+    
+    <route url="/tmpfile/insert" module="tmpfile" action="insert"/>
+    <route url="/tmpfile/insert-index" module="tmpfile" action="insertIndex"/>
+    
+    <route url="/support/rapport" module="support" action="insertIndexRapport"/> 
+    <route url="/support/don" module="support" action="indexDon"/> 
+    <route url="/support/insert-don" module="support" action="insertDon"/> 
+    <route url="/support/insert-rapport" module="support" action="insertRapport"/> 
+    
+	<route url="/user/insert-index" module="user" action="insertIndex"/>
+    <route url="/user/insert" module="user" action="insert"/>
+    <!--<route url="/user/login-exists" module="user" action="loginExists"/>-->
+    <route url="/user/connexion" module="user" action="connexion"/>
+    <route url="/user/connect" module="user" action="connect"/>
+    <route url="/user/deconnexion" module="user" action="deconnexion"/>
+    <route url="/user/delete" module="user" action="delete"/>
+    <route url="/user/gestion" module="user" action="gestion"/>
+    <route url="/user/update-index" module="user" action="updateIndex"/>
+    <route url="/user/update-email" module="user" action="updateEmail"/>
+    <route url="/user/update-password" module="user" action="updatePassword"/>
+	<route url="/user/passwordIndex" module="user" action="passwordIndex"/>
+    <route url="/user/passwordForgotten" module="user" action="passwordForgotten"/>
+    
+    <route url="/video/gestion(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="video" action="gestion"/>
+    <route url="/video/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="video" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/video/insert" module="video" action="insert"/>
+    <route url="/video/insert-index" module="video" action="insertIndex"/>
+    <route url="/video/update-([0-9]+)" module="video" action="update" vars="id"/>
+    <route url="/video/update-index-([0-9]+)" module="video" action="updateIndex" vars="id"/>
+    <route url="/video/delete-([0-9]+)" module="video" action="delete" vars="id"/>
+    <route url="/video/show-([0-9]+)" module="video" action="show" vars="id"/>
+</routes>

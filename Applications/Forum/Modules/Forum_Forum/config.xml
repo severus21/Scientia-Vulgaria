@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<general>
+	<action name="all">
+		<definitions>
+			<define var="table-nbrObjectsPerPage" value="25"/>
+			<define var="table-nbrSelectablePages" value="5"/>
+		</definitions>
+		<msgs>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucun topic ne correspond à votre recherche."/>
+			</msg>
+			<msg var="table-th-titre">
+				<string lang="fr" value="Titre"/>
+			</msg>
+			<msg var="table-th-createur">
+				<string lang="fr" value="Createur"/>
+			</msg>
+			<msg var="table-th-vues">
+				<string lang="fr" value="Vues"/>
+			</msg>
+			<msg var="table-th-posts">
+				<string lang="fr" value="Posts"/>
+			</msg>
+			<msg var="table-th-dateCreation">
+				<string lang="fr" value="Date"/>
+			</msg>
+		</msgs>
+		<forms>
+			<fields>
+				<field var="recherche">
+					<string langue="fr" value="Recherche"/>
+				</field>
+				<field var="langue">
+					<string langue="fr" value="Langue"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="recherche">
+					<string langue="fr" value="256 caractères maximun."/>
+				</tooltip>
+				<tooltip var="langue">
+					<string langue="fr" value="Langue inconnue"/>
+				</tooltip>
+			</tooltips>
+		</forms>
+		<navs>
+			<nav var="topForumNav-index">
+				<string lang="fr" value="Accueil"/>
+			</nav>
+			<nav var="topForumNav-insert">
+				<string lang="fr" value="Nouveau topic"/>
+			</nav>
+		</navs>
+	</action>
+
+</general>

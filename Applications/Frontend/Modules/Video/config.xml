@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="video">
+	<action name="all">
+		<views>
+			<view var="waiting-convertion">
+				<string lang="fr" value="En attente de convertion."/>
+			</view>
+		</views>
+		<!--Config-->
+		<includes>
+			<include src="File"/>
+		</includes>
+	</action>
+	
+	<action name="delete">
+		<flashs>
+			<flash var="sucessful-delete">
+				<string lang="fr" value="Suppression effectuée"/>
+			</flash>
+		</flashs>
+	</action>
+	
+	<action name="insert">
+		<!--Message-->
+		<flashs>
+			<flash var="invalid-type">
+				<string lang="fr" value="Type du fichier invalide"/>
+			</flash>
+			<flash var="infected-file">
+				<string lang="fr" value="Attention : fichier infecté"/>
+			</flash>
+			<flash var="upload-failed">
+				<string lang="fr" value="Echec lors de l\'upload, veuillez réessayer dans quelques instants"/>								
+			</flash>
+			<flash var="invalid-type">
+				<string lang="fr" value="Type de fichier bon supporté"/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer cette video"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enrgistrement terminé"/>
+			</flash>
+		</flashs>
+	</action>
+</module>

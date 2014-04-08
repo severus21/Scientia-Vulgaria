@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="tmpfile">
+	<action name="delete">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-delete">
+				<string lang="fr" value="Suppression effectuée"/>
+			</flash>
+		</flashs>
+	</action>
+
+	<action name="all">
+		<!--JS-->
+		<js src="/Scripts/multi_file_upload.js"/>
+		<!--Message-->
+		<flashs>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enrgistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Formulaire invalide"/>
+			</flash>
+			<flash var="invalid-type">
+				<string lang="fr" value="Type non supporté : "/>
+			</flash>
+		</flashs>
+		<!--Menu-->
+		<!--Form-->
+		<form>
+			<tooltips>
+				<tooltip var="file">
+					<string lang="fr" value=""/>
+				</tooltip>
+			</tooltips>
+			<fields>
+				<field var="file">
+					<string lang="fr" value="Fichier :"/>
+				</field>
+			</fields>
+		</form>
+		<!--View-->
+		<views>
+			<view var="max-time">
+				<string lang="fr" value="Attention : Les fichiers sont conservés pendant 48h"/>
+			</view>
+		</views>
+	</action>
+</module>
+

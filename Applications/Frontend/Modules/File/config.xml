@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="file">
+	<action name="insert">
+		<!--Message-->
+		<flashs>
+			<flash var="invalid-type">
+				<string lang="fr" value="Type du fichier invalide"/>
+			</flash>
+			<flash var="forbidden-type">
+				<string lang="fr" value="Type du fichier interdit"/>
+			</flash>
+			<flash var="infected-file">
+				<string lang="fr" value="Attention : fichier infecté"/>
+			</flash>
+			<flash var="upload-failed">
+				<string lang="fr" value="Echec lors de l\'upload, veuillez réessayer dans quelques instants"/>								
+			</flash>
+			<flash var="invalid-type">
+				<string lang="fr" value="Type de fichier non supporté"/>
+			</flash>
+		</flashs>
+	</action>
+</module>

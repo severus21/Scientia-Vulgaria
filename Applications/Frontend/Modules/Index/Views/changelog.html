@@ -1,0 +1,107 @@
+<aside id="changelog">
+	<h4>Changelog :</h4>
+	<ol>
+		<li>v0.4.2[9/01/2014]</li>
+			<ul>
+				<li>Bugfix : corrections mineures</li>
+				<li>Gestions des catégories, ajout d'un module de news</li>
+			</ul>
+		<li>v0.4.1[30/12/2013]</li>
+			<ul>
+				<li>Bugfix : suppression film</li>
+				<li>Ajout d'une fonction d'export à Thot</li>
+			</ul>
+		<li>v0.4[29/12/2013]</li>
+			<ul>
+				<li>Ajout d'une zone d'administration</li>
+				<li>Gestion des permitions ~ sudo, double et triple identifications  </li>
+				<li>Ajout d'un module de gestion du cache</li>
+				<li>Ajout d'un module de news</li>
+				<li>Recherche avec sphinx : Film, Software, Ebook, Serie</li>
+				<li>Protection des sessions</li>
+				<li>Utilisation du moteur de recherche Sphinx</li>
+				<li>Ajout de thot</li>
+				<li>Modification de la architecture logicielle</li>
+			</ul>
+		<li>v0.3.5</li>
+			<ul>
+				<li>ObjectFactory : association parent-enfant corrigée</li>
+				<li>Ajout de robots.txt</li>
+				<li>Bugfix : redirection après ajout et formulaire</li>
+				<li>Gestion du nombre de page en cache depuis les fichiers de conf pour MiddleControler index et gestion</li>
+				<li>Mise en cache des saisons et episodes</li>
+			</ul>
+		<li>v0.3.4[26/10/2013]
+			<ul>
+				<li>Abandon d'APC au profit de Opcache(pr le cache d'opcode) et de mencached(cache en ram)</li>
+				<li>Ajout du module série</li>
+				<li>Bugfix : remote upload</li>
+				<li>Bugfix : tri corrigé dans les modules : film, software et ebook sur la col nom(content.content cf.structure)</li>
+				<li>Bugfix : forum de nouveau operationnel</li>
+			</ul>
+		</li>
+		<li>v0.3.3[12/10/2013]
+			<ul>
+				<li>Ajout du champ : isbn(ebook)</li>
+				<li>Modification des règles d'ajout : fichier non obligatoire(Ebook,Software,Film)	</li>
+				<li>Ajout de fichiers temporaires</li>
+				<li>Gestion de la configuration des modules améliorée : inclusion entre fichiers possible</li>
+				<li>Bugfix : modification des softwares corrigée</li>
+				<li>Https supprimé pour éviter l'excecption de sécurité causée par le certificat auto-signé</li>
+			</ul>
+		</li>
+		<li>v0.3.2[09/09/2013]
+			<ul>
+				<li>Bugfix : nbr de posts et de topics par forum corrigé</li>
+				<li>Bugfix : convertion video après remote upload opérationnelle</li>
+				<li>CSS mis à jour</li>
+				<li>Ajout du titre(pas trop top)</li>
+				<li>Amélioration des performances</li>
+			</ul>
+		</li>
+		<li>v0.3.1[08/08/2013]</li>
+			<ul>
+				<li>Bugfix : encodage caractères accentués corrigé</li>
+				<li>Faille XSS patchée</li>
+				<li>Bugfix : les objets enfants ne sont plus associés aléatoirement</li>
+			</ul>
+		<li>v0.3.0[31/07/2013]</li>
+			<ul>
+				<li>Bugfix : tri des colonnes possible lors d'un affichage sous forme de tableau</li>
+				<li>Amélioration des performances : construction des objets accélérée</li>
+				<li>Remote upload ajoutée(vitesse minimale 100Ko/s), modules concernés : film, ebook</li>
+				<li>Bugfix : suppression du soustitre auto lors de la modification d'un film</li>
+			</ul>
+		<li>v0.2.1[14/06/2013]</li>
+			<ul>
+				<li>Bugfix : superposition des différents blocs sur l'index du forum</li>
+				<li>Https obligatoire (certificat auto-signé)</li>
+			</ul>
+		<br/>
+		<li>v0.2.0[25/05/2013]</li>
+			<ul>
+				<li>Augmentation du temps limite de convertion de 26400s à 36400s</li>
+				<li>Faille CSRF corrigée</li>
+				<li>Support des fichiers iso pour les logiciels</li>
+				<li>Ajout du forum</li>
+				<li>Bugfix : correction de l\'encodage des entitées html lors de la modification des objets</li>
+				<li>Bugfix : date de creation de compte corrigée (différente de 0000-00-00 00:00:00)</li>
+			</ul>
+		<br/>
+		<li>v0.1.1[5/05/2013] :</li>
+			<ul>
+				<li>Bugfix : correction de la regression due au passage à la v0.1.0 : streaming et télécharment des films restaurés</li>
+			</ul>
+		<br/>	
+		<li>v0.1.0[4/05/2013] :</li>
+			<ul>
+				<li>Fichiers multiples pour les films et les ebooks</li>
+				<li>Augmentation du temps d\'executon pour la convertion et pour l\'upload</li>
+				<li>Résolution des films disponible</li>
+				<li>Bugfix : Correction du traitement des archives</li>
+				<li>Bugfix : affichage de \\\' et de \\" au lieu de \' et de "</li>
+				<li>Bugfix : modifications des infos pour les modules : film, software et ebook sont de nouveau possibles</li>
+				<li>BugFix : les options par défaut des listes déroulantes, dans les formulaires d\'update, sont maintenant valides</li>
+			</ul>
+	</ol>
+</aside>

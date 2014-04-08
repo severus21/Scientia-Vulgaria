@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="erreur">
+	<action name="all">
+		<views>
+			<view var="E404">
+				<string lang="fr" value="La ressource demandée est introuvable."/>
+				<string lang="uk" value="Ressource not found!"/>
+			</view>
+			<view var="E507">
+				<string lang="fr" value="Espace de stockage insuffisant veuillez contacter un administateur."/>
+				<string lang="uk" value="Insufficient storage!"/>
+			</view>
+		</views>
+	</action>
+</module>

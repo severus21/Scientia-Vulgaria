@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="archive">
+	<action name="all">
+		<!--Config-->
+		<includes>
+			<include src="File"/>
+		</includes>
+	</action>
+	<action name="insert">
+		<!--Message-->
+		<flashs>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer cette image"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enrgistrement terminé"/>
+			</flash>
+			<flash var="invalid-type">
+				<string lang="fr" value="Type de fichier non supporté"/>
+			</flash>
+		</flashs>
+	</action>
+</module>

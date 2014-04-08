@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+	<!-- Auth -->
+	<route url="/backend/auth/auth1-index" module="Backend_Auth" action="auth1Index"/>
+	<route url="/backend/auth/auth1" module="Backend_Auth" action="auth1"/>
+	<route url="/backend/auth/auth2-index" module="Backend_Auth" action="auth2Index"/>
+	<route url="/backend/auth/auth2" module="Backend_Auth" action="auth2"/>
+	
+	<!-- Cache -->
+	<route url="/backend/cache/index" module="Backend_Cache" action="index"/>
+	<route url="/backend/cache/drop" module="Backend_Cache" action="drop"/>
+	<route url="/backend/cache/drop-mem" module="Backend_Cache" action="dropMem"/>
+	<route url="/backend/cache/unset(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="Backend_Cache" action="unset"/>
+	<route url="/backend/cache/list" module="Backend_Cache" action="list"/>
+	
+	<!-- Catégorie -->
+	<route url="/backend/categorie/index(-([a-zA-Z]+)-([a-zA-Z]+)-([a-zA-Z]+))?(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="Backend_Categorie" action="index" vars="null,apdpl,classObj,lang"/>
+	<route url="/backend/categorie/insert-index" module="Backend_Categorie" action="insertIndex"/>
+	<route url="/backend/categorie/update-index-([0-9]+)-([a-zA-Z]+)" module="Backend_Categorie" action="updateIndex" vars="id,table"/>
+	<route url="/backend/categorie/update-([0-9]+)-([a-zA-Z]+)" module="Backend_Categorie" action="update" vars="id,table" />
+	<route url="/backend/categorie/insert" module="Backend_Categorie" action="insert"/>
+	<route url="/backend/categorie/delete-([0-9]+)" module="Backend_Categorie" action="delete" vars="id"/>
+	
+	<!-- Index -->
+	<route url="/backend/index/index" module="Backend_Index" action="index"/>
+	<route url="/backend/index/dashboard" module="Backend_Index" action="dashboard"/>
+	
+	<!-- Log -->
+	<route url="/backend/log/index" module="Backend_Log" action="index"/>
+	
+	<!-- News -->
+    <route url="/backend/news/index(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="Backend_News" action="index"/> <!-- Utilisation de . pour & -->
+    <route url="/backend/news/insert" module="Backend_News" action="insert"/>
+    <route url="/backend/news/insert-index" module="Backend_News" action="insertIndex"/>
+    <route url="/backend/news/update-([0-9]+)" module="Backend_News" action="update" vars="id"/>
+    <route url="/backend/news/update-index-([0-9]+)" module="Backend_News" action="updateIndex" vars="id"/>
+    <route url="/backend/news/delete-([0-9]+)" module="Backend_News" action="delete" vars="id"/>
+	
+	
+	
+	
+	
+	
+	
+</routes>

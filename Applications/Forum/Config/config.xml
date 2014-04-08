@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<general>
+	<!--Css-->
+	<css src="/Css/frontend-default.css"/>
+	<css src="/Css/forum-default.css"/>
+	<css src="/Css/topic-default.css"/>
+	<!--Js-->
+	<js src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"/>
+	<js src="/Scripts/bbcode.js"/>
+	<js src="/Scripts/jquery.a-tools.min.js"/>
+	<navs>
+		<nav var="topMainMenu-accueil">
+			<string lang="fr" value="Accueil"/>
+		</nav>
+		<nav var="topMainMenu-support">
+			<string lang="fr" value="Support"/>
+		</nav>
+		<nav var="topMainMenu-deconnexion">
+			<string lang="fr" value="Déconnexion"/>
+		</nav>
+		<nav var="topMainMenu-connexion">
+			<string lang="fr" value="Connexion"/>
+		</nav>
+		<nav var="topMainMenu-inscription">
+			<string lang="fr" value="Inscription"/>
+		</nav>
+		<nav var="topMainMenu-compte">
+			<string lang="fr" value="Mon compte"/>
+		</nav>
+	</navs>
+	<forms>
+		<fields>
+			<field var="gras">
+				<string lang="fr" value="Gras"/>
+			</field>
+			<field var="italic">
+				<string lang="fr" value="Italic"/>
+			</field>
+			<field var="souligne">
+				<string lang="fr" value="Souligné"/>
+			</field>
+			<field var="lien">
+				<string lang="fr" value="Url"/>
+			</field>
+		</fields>
+	</forms>
+</general>

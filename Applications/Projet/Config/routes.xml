@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+	<!-- Thot -->
+		<route url="/projet/thot/index" module="Projet_Thot" action="index"/>
+		<route url="/projet/thot/list(:?\?(:?[a-zA-Z0-9=;](:?.)?)+)?" module="Projet_Thot" action="list"/>
+		<route url="/projet/thot/export-([0-9]+)" module="Projet_Thot" action="export" vars="id"/>
+		
+		<!-- Exemple -->
+			<route url="/projet/thot/insert-exemple" module="Projet_Thot" action="insertExemple"/>
+			<route url="/projet/thot/insert-index-exemple" module="Projet_Thot" action="insertIndexExemple"/>
+			<route url="/projet/thot/insert-index-multi-exemple" module="Projet_Thot" action="insertIndexMultiExemple"/>
+			<route url="/projet/thot/insert-multi-exemple" module="Projet_Thot" action="insertMultiExemple"/>
+			<route url="/projet/thot/update-exemple-([0-9]+)" module="Projet_Thot" action="updateExemple" vars="id"/>
+			<route url="/projet/thot/update-index-exemple-([0-9]+)" module="Projet_Thot" action="updateIndexExemple" vars="id"/>
+			<route url="/projet/thot/delete-exemple-([0-9]+)" module="Projet_Thot" action="deleteExemple" vars="id"/>
+		<!-- Database -->
+			<route url="/projet/thot/insert-database" module="Projet_Thot" action="insertDatabase"/>
+			<route url="/projet/thot/insert-index-database" module="Projet_Thot" action="insertIndexDatabase"/>
+			<route url="/projet/thot/update-database-([0-9]+)" module="Projet_Thot" action="updateDatabase" vars="id"/>
+			<route url="/projet/thot/update-index-database-([0-9]+)" module="Projet_Thot" action="updateIndexDatabase" vars="id"/>
+			<route url="/projet/thot/delete-database-([0-9]+)" module="Projet_Thot" action="deleteDatabase" vars="id"/>
+		
+</routes>

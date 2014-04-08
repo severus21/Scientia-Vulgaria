@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="projet_Thot">
+	<action name="all">
+		<defines>
+			<define var="default-description-image" value="projet-thot"/>
+			<define var="height-miniature" value="50" />
+			<define var="weight-miniature" value="50" />
+			
+			
+			
+			<define var="mosaique-nbrObjectsPerPage" value="100"/>
+			<define var="mosaique-nbrSelectablePages" value="11"/>
+			
+			<define var="table-nbrObjectsPerPage" value="100"/>
+			<define var="table-nbrSelectablePages" value="11"/>
+		</defines>
+		<!--Formulaire-->
+		<form>
+			<fields>
+				<field var="nom">
+					<string lang="fr" value="Nom :"/>
+				</field>
+				<field var="file">
+					<string lang="fr" value="Archive :"/>
+				</field>
+				<field var="type">
+					<string lang="fr" value="Type :"/>
+				</field>
+				<field var="id_thotDatabase_database">
+					<string lang="fr" value="Database :"/>
+				</field>
+				<field var="c">
+					<string lang="fr" value="Caractère :"/>
+				</field>
+				<field var="image">
+					<string lang="fr" value="Image :"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="file">
+					<string lang="fr" value="zip uniquement"/>
+				</tooltip>
+				<tooltip var="nom">
+					<string lang="fr" value="256 caractères max"/>
+				</tooltip>
+				<tooltip var="type">
+					<string lang="fr" value="256 caractères max"/>
+				</tooltip>
+				<tooltip var="id_thotDatabase_database">
+					<string lang="fr" value=""/>
+				</tooltip>
+				<tooltip var="c">
+					<string lang="fr" value="256 caractères max"/>
+				</tooltip>
+				<tooltip var="image">
+					<string lang="fr" value="image nécessaire"/>
+				</tooltip>
+			</tooltips>
+		</form>
+		<flashs>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+		</flashs>
+		<navs>
+			<nav var="doc">
+				<string lang="fr" value="Documentation"/>
+			</nav>
+			<nav var="sources">
+				<string lang="fr" value="Sources"/>
+			</nav>
+			<nav var="index">
+				<string lang="fr" value="Accueil"/>
+			</nav>
+			<nav var="list">
+				<string lang="fr" value="Base d'exemples"/>
+			</nav>
+			<nav var="insert-database">
+				<string lang="fr" value="Add db"/>
+			</nav>
+			<nav var="insert-exemple">
+				<string lang="fr" value="Add ex"/>
+			</nav>
+		</navs>
+		<views>
+		</views>
+		<pagination>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucun résultat ne correspond à votre recherche"/>
+			</msg>
+		</pagination>
+		
+		<!-- CSS -->
+		<css src="/Css/thot-default.css"/>
+	</action>
+</module>

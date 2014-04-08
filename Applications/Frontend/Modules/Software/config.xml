@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="software">
+	<action name="delete">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-delete">
+				<string lang="fr" value="Suppression effectuée"/>
+			</flash>
+		</flashs>
+	</action>
+	
+	<action name="update">
+		<!--Message-->
+		<flashs> 
+			<flash var="sucessful-file-update">
+				<string lang="fr" value="Modifications effectuées."/>
+			</flash>
+		</flashs>
+	</action>
+
+	<action name="all">
+		<!--JS-->
+		<js src="/Scripts/multi_file_upload.js"/>
+		<!--Variables-->
+		<definitions>
+			<define var="miniature-x" value="180"/>
+			<define var="miniature-y" value="240"/>
+			
+			<define var="index-cache-depth" value="10"/>
+			
+			<define var="default-description-document" value="Software"/>	
+			<define var="default-description-image" value="Software"/>	
+			<define var="default-description-archive" value="Software"/>	
+			
+			<define var="mosaique-nbrObjectsPerPage" value="30"/>
+			<define var="mosaique-nbrSelectablePages" value="11"/>
+			
+			<define var="table-nbrObjectsPerPage" value="100"/>
+			<define var="table-nbrSelectablePages" value="11"/>
+			
+			<define var="related-nbrObjectsPerPage" value="10"/>
+			<define var="related-nbrSelectablePages" value="11"/>
+		</definitions>
+		<!--Message-->
+		<flashs>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enrgistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer ce film"/>
+			</flash>
+		</flashs>
+		<!--Menu-->
+		<menus>
+			<nav var="topSoftwareNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+			<nav var="topSoftwareNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topSoftwareNav-gestion">
+				<string lang="fr" value="Mes softwares"/>
+			</nav>
+			<nav var="topSoftwareNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topSoftwareNav-update">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+			<nav var="topSoftwareNav-delete">
+				<string lang="fr" value="Supprimer"/>
+			</nav>
+		</menus>
+		<!--Form-->
+		<form>
+			<tooltips>
+				<tooltip var="nom">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="developpeur">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="categorie">
+					<string lang="fr" value="Catégorie inconnu"/>
+				</tooltip>
+				<tooltip var="langue">
+					<string lang="fr" value="Langue inconnue"/>
+				</tooltip>
+				<tooltip var="os">
+					<string lang="fr" value="Système d'exploitation inconnue"/>
+				</tooltip>
+				<tooltip var="description">
+					<string lang="fr" value="'Chaine de 2000 caractères max'"/>
+				</tooltip>
+				<tooltip var="date">
+					<string lang="fr" value="Doit être sous la forme AAAA-MM-DD ex:1999-12-02"/>
+				</tooltip>
+				<tooltip var="editeur">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="license">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="version">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="file">
+					<string lang="fr" value="Seul les archives sont autorisées"/>
+				</tooltip>
+				<tooltip var="miniature">
+					<string lang="fr" value="Seul les images sont autorisées"/>
+				</tooltip>
+				<tooltip var="tutoriel">
+					<string lang="fr" value="Seul les documents sont autorisés"/>
+				</tooltip>
+				<tooltip var="recherche">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+			</tooltips>
+			<fields>
+			<field var="nom">
+				<string lang="fr" value="Titre :"/>
+			</field>
+			<field var="developpeur">
+				<string lang="fr" value="Developpeur :"/>
+			</field>
+			<field var="categorie">
+				<string lang="fr" value="Catégorie :"/>
+			</field>
+			<field var="langue">
+				<string lang="fr" value="Langue :"/>
+			</field>
+			<field var="os">
+				<string lang="fr" value="Système d'exploitation :"/>
+			</field>
+			<field var="description">
+				<string lang="fr" value="Description :"/>
+			</field>
+			<field var="date">
+				<string lang="fr" value="Date de sortie :"/>
+			</field>
+			<field var="editeur">
+				<string lang="fr" value="Editeur :"/>
+			</field>
+			<field var="license">
+				<string lang="fr" value="License :"/>
+			</field>
+			<field var="version">
+				<string lang="fr" value="Version :"/>
+			</field>
+			<field var="file">
+				<string lang="fr" value="Fichier :"/>
+			</field>
+			<field var="miniature">
+				<string lang="fr" value="Miniature :"/>
+			</field>
+			<field var="tutoriel">
+				<string lang="fr" value="Tutoriel :"/>
+			</field>
+			<field var="recherche">
+				<string lang="fr" value="Rechercher :"/>
+			</field>
+			<field var="order">
+				<string lang="fr" value="Trier par :"/>
+			</field>
+			<field var="option-order-default">
+				<string lang="fr" value="date d'ajout"/>
+			</field>
+			<field var="option-order-date">
+				<string lang="fr" value="date de sortie"/>
+			</field>
+			<field var="option-order-langue">
+				<string lang="fr" value="langue"/>
+			</field>
+			<field var="option-order-nom">
+				<string lang="fr" value="nom"/>
+			</field>
+			<field var="size">
+				<string lang="fr" value="Size : "/>
+			</field>
+			<field var="type">
+				<string lang="fr" value="Type : "/>
+			</field>
+			<field var="md5">
+				<string lang="fr" value="Md5 : "/>
+			</field>
+			<field var="sha512">
+				<string lang="fr" value="Sha512 : "/>
+			</field>
+		</fields>
+		</form>
+		<!--Pagination-->
+		<pagination>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucun résultat ne correspond à votre recherche"/>
+			</msg>
+			<msg var="table-th-nom">
+				<string lang="fr" value="Nom"/>
+			</msg>
+			<msg var="table-th-categorie">
+				<string lang="fr" value="Categorie"/>
+			</msg>
+			<msg var="table-th-os">
+				<string lang="fr" value="Système d'exploitation"/>
+			</msg>
+			<msg var="table-th-langue">
+				<string lang="fr" value="Langue"/>
+			</msg>
+			<msg var="table-th-version">
+				<string lang="fr" value="Version"/>
+			</msg>
+			<msg var="table-th-description">
+				<string lang="fr" value="Description"/>
+			</msg>
+			<msg var="table-th-showlink">
+				<string lang="fr" value="Lien"/>
+			</msg>
+		</pagination>
+		<!--View-->
+		<views>
+			<view var="size">
+				<string lang="fr" value="Poids"/>
+			</view>
+			<view var="format">
+				<string lang="fr" value="Format"/>
+			</view>
+			<view var="developpeur">
+				<string lang="fr" value="Développeur/Editeur"/>
+			</view>
+			<view var="categorie">
+				<string lang="fr" value="Catégorie"/>
+			</view>
+			<view var="langue">
+				<string lang="fr" value="Langue"/>
+			</view>
+			<view var="os">
+				<string lang="fr" value="Système d'exploitation"/>
+			</view>
+			<view var="date">
+				<string lang="fr" value="Date de sortie"/>
+			</view>
+			<view var="license">
+				<string lang="fr" value="License"/>
+			</view>
+			<view var="version">
+				<string lang="fr" value="Version"/>
+			</view>
+			<view var="description">
+				<string lang="fr" value="Description"/>
+			</view>
+			<view var="default-tuto-empty">
+				<string lang="fr" value="Aucun tutoriel disponible pour ce logiciel"/>
+			</view>
+			<view var="default-archive-empty">
+				<string lang="fr" value="Aucun fichier disponible pour ce logiciel"/>
+			</view>
+			<view var="title-info-tuto">
+				<string lang="fr" value="Tutoriel"/>
+			</view>
+			<view var="title-info-gen">
+				<string lang="fr" value="Informations générales"/>
+			</view>
+			<view var="title-info-file">
+				<string lang="fr" value="Informations relatives à l'archive"/>
+			</view>
+			<view var="title-related-software">
+				<string lang="fr" value="Logiciels similaires"/>
+			</view>
+		</views>
+		<!--CSS-->
+		<css src="/Css/software-default.css"/>
+	</action>
+	<action name="show">
+		<pagination>
+			<msg var="default-related-empty">
+				<string lang="fr" value="Aucun logiciel lié"/>
+			</msg>
+		</pagination>
+	</action>
+</module>

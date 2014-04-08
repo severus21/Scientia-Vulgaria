@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="episode">
+	<action name="delete">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-delete">
+				<string lang="fr" value="Suppression effectuée"/>
+			</flash>
+		</flashs>
+	</action>
+	
+	<action name="update">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-file-update">
+				<string lang="fr" value="Fichier video mis à jour."/>
+			</flash>
+		</flashs>
+	</action>
+
+	<action name="all">
+		<!--JS-->
+		<js src="/Scripts/multi_file_upload.js"/>
+		<!--Variables-->
+		<definitions>	
+			<define var="default-description-video" value="Episode"/>
+			
+			<define var="mosaique-nbrObjectsPerPage" value="30"/>
+			<define var="mosaique-nbrSelectablePages" value="11"/>
+			<define var="table-nbrObjectsPerPage" value="100"/>
+			<define var="table-nbrSelectablePages" value="11"/>
+		</definitions>
+		<!--Message-->
+		<flashs>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer ce episode"/>
+			</flash>
+		</flashs>
+		<!--Menu-->
+		<menus>
+			<nav var="topEpisodeNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+			<nav var="topEpisodeNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topEpisodeNav-update">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+			<nav var="topEpisodeNav-delete">
+				<string lang="fr" value="Supprimer"/>
+			</nav>
+		</menus>
+		<!--Form-->
+		<form>
+			<tooltips>
+				<tooltip var="nom">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="numero">
+					<string lang="fr" value="Chiffres uniquement"/>
+				</tooltip>
+				<tooltip var="resume">
+					<string lang="fr" value="'Chaine de 2000 caractères max'"/>
+				</tooltip>
+				<tooltip var="subtitle">
+					<string lang="fr" value="Soustitre inconnu"/>
+				</tooltip>
+				<tooltip var="file">
+					<string lang="fr" value="Seul les documents sont autorisées"/>
+				</tooltip>
+			</tooltips>
+			<fields>
+				<field var="nom">
+					<string lang="fr" value="Nom :"/>
+				</field>
+				<field var="numero">
+					<string lang="fr" value="Episode n° :"/>
+				</field>
+				<field var="resume">
+					<string lang="fr" value="Résumé :"/>
+				</field>
+				<field var="subtitle">
+					<string lang="fr" value="Soustitre :"/>
+				</field>
+				<field var="file">
+					<string lang="fr" value="Fichier :"/>
+				</field>
+			</fields>
+		</form>
+		<!--Pagination-->
+		<pagination>
+			<!--<msg var="table-th-nom">
+				<string lang="fr" value="Nom"/>
+			</msg>-->
+		</pagination>
+		<!--View-->
+		<views>
+			<view var="numero">
+				<string lang="fr" value="Episode n°"/>
+			</view>
+			<view var="resume">
+				<string lang="fr" value="Résumé"/>
+			</view>
+			<view var="title-info-gen">
+				<string lang="fr" value="Informations générales"/>
+			</view>
+			<view var="title-info-files">
+				<string lang="fr" value="Fichiers"/>
+			</view>
+			<view var="subtitle">
+				<string lang="fr" value="Sous-titre"/>
+			</view>
+			<view var="default-video-empty">
+				<string lang="fr" value="Aucune video disponible pour cet episode"/>
+			</view>
+			<view var="size">
+				<string lang="fr" value="Poids"/>
+			</view>
+			<view var="format">
+				<string lang="fr" value="Format"/>
+			</view>
+			<view var="resolution">
+				<string lang="fr" value="Résolution"/>
+			</view>
+		</views>
+		<!--Css-->
+		<css src="/Css/episode-default.css"/>
+	</action>
+	<action name="show">
+		<pagination>
+			<msg var="default-related-empty">
+				<string lang="fr" value="Aucun épisode lié"/>
+			</msg>
+		</pagination>
+	</action>
+</module>

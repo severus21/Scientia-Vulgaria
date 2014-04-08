@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="backend_Auth">
+	<action name="all">
+		<!--Formulaire-->
+		<form>
+			<fields>
+				<field var="password">
+					<string lang="fr" value="Mot de passe :"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="password">
+					<string lang="fr" value="Seul les caractères : a-zA-Z0-9_@ sont autorisés,  4 à 30 caractères"/>
+				</tooltip>
+			</tooltips>
+		</form>
+		<flash>
+			<flashs>
+				<flash var=" sucessful-auth1">
+					<string lang="fr" value="Permition validée."/>
+				</flash>
+			</flashs>
+		</flash>
+	</action>
+</module>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<general>
+	<!--Css-->
+	<css src="/Css/frontend-default.css"/>
+	<!--Js-->
+	<js src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"/>
+	<navs>
+		<nav var="topMainMenu-accueil">
+			<string lang="fr" value="Accueil"/>
+		</nav>
+		<nav var="topMainMenu-support">
+			<string lang="fr" value="Support"/>
+		</nav>
+		<nav var="topMainMenu-deconnexion">
+			<string lang="fr" value="Déconnexion"/>
+		</nav>
+		<nav var="topMainMenu-connexion">
+			<string lang="fr" value="Connexion"/>
+		</nav>
+		<nav var="topMainMenu-inscription">
+			<string lang="fr" value="Inscription"/>
+		</nav>
+		<nav var="topMainMenu-compte">
+			<string lang="fr" value="Mon compte"/>
+		</nav>
+	</navs>
+</general>
+
+<!--
+	Gestion config multi langue :
+	on stocke la langue dans une ssession
+	puis dans config
+	<module name="">
+		<definitions>
+			<define var="" value=""/>
+		</definitions>
+		
+		<flashs>
+			<flash var="">
+				<string langue="fr" value=""/>
+				<string langue="uk" value=""/>
+				....
+			</flash>
+		</flashs>
+		
+		<tooltips>
+			<tooltip var="">
+				<string lang="fr" value=""/>
+			</tooltip>
+		</tooltips>
+
+		<css src=""/>
+		<js src=""/>
+	</module>
+
+-->

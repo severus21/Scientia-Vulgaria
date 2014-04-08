@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<general>
+	<action name="all">
+		<flashs>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation d'accéder à cette page"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Champs invalids"/>
+			</flash>
+			<flash var="mysql-record-failed">
+				<string lang="fr" value="Erreur lors de l'enregistrement en bas de donnée,
+				 veuillez contacter l'administrateur si le problème persiste"/>
+			</flash>
+			<flash var="successfull-record">
+				<string lang="fr" value="Enregistrement terminé."/>
+			</flash>
+			<flash var="successfull-delete">
+				<string lang="fr" value="Supression effectuée."/>
+			</flash>
+			<flash var="delete-first-not-allowed">
+				<string lang="fr" value="Suppression du premier post non autorisée, il faut supprimer tout le topic."/>
+			</flash>
+		</flashs>
+		<form>
+			<fields>
+				<field var="text">
+					<string lang="fr" value="Texte :"/>
+				</field>
+			</fields>
+			<tooltips>
+				<tooltip var="text">
+					<string lang="fr" value="Doit être une chaine de caractères non vide de taille max : 30000car"/>
+				</tooltip>
+			</tooltips>
+		</form>
+		<navs>
+			<nav var="headerShowPost-update">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+			<nav var="headerShowPost-delete">
+				<string lang="fr" value="Supprimer"/>
+			</nav>
+		</navs>
+	</action>
+
+</general>

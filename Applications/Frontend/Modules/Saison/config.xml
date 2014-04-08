@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="saison">
+	<action name="delete">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-delete">
+				<string lang="fr" value="Suppression effectuée"/>
+			</flash>
+		</flashs>
+	</action>
+	
+	<action name="update">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-file-update">
+				<string lang="fr" value="Fichier video mis à jour."/>
+			</flash>
+		</flashs>
+	</action>
+
+	<action name="all">
+		<!--JS-->
+		<js src="/Scripts/multi_file_upload.js"/>
+		<!--Variables-->
+		<definitions>	
+			<define var="miniature-x" value="180" />
+			<define var="miniature-y" value="240" />
+			<define var="default-description-image" value="Saison"/>
+			<define var="default-description-video" value="Saison"/>
+			
+			<define var="mosaique-nbrObjectsPerPage" value="30"/>
+			<define var="mosaique-nbrSelectablePages" value="11"/>
+			<define var="table-nbrObjectsPerPage" value="100"/>
+			<define var="table-nbrSelectablePages" value="11"/>
+			<define var="related-nbrObjectsPerPage" value="100"/>
+			<define var="related-nbrSelectablePages" value="11"/>
+		</definitions>
+		<!--Message-->
+		<flashs>
+			<flash var="mysql-record-failed">
+					<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="result-search-empty">
+				<string lang="fr" value="Aucunne saison de correspond à votre requête"/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer ce saison"/>
+			</flash>
+		</flashs>
+		<!--Menu-->
+		<menus>
+			<nav var="topSaisonNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+			<nav var="topSaisonNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topSaisonNav-update">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+			<nav var="topSaisonNav-delete">
+				<string lang="fr" value="Supprimer"/>
+			</nav>
+			<nav var="topSaisonNav-insert-episode">
+				<string lang="fr" value="Ajouter un episode"/>
+			</nav>
+		</menus>
+		<!--Form-->
+		<form>
+			<tooltips>
+				<tooltip var="numero">
+					<string lang="fr" value="Chiffres uniquement"/>
+				</tooltip>
+				<tooltip var="resume">
+					<string lang="fr" value="'Chaine de 2000 caractères max'"/>
+				</tooltip>
+				<tooltip var="date">
+					<string lang="fr" value="Doit être sous la forme AAAA-MM-DD ex:1999-12-02"/>
+				</tooltip>
+				<tooltip var="miniature">
+					<string lang="fr" value="Seul les images sont autorisées"/>
+				</tooltip>
+				<tooltip var="nbrEpisodes">
+					<string lang="fr" value="Chiffres uniquement"/>
+				</tooltip>
+			</tooltips>
+			<fields>
+				<field var="numero">
+					<string lang="fr" value="Saison n° :"/>
+				</field>
+				<field var="resume">
+					<string lang="fr" value="Résumé :"/>
+				</field>
+				<field var="date">
+					<string lang="fr" value="Date de sortie :"/>
+				</field>
+				<field var="miniature">
+					<string lang="fr" value="Miniature :"/>
+				</field>
+				<field var="nbrEpisodes">
+					<string lang="fr" value="Nombre d'épisodes"/>
+				</field>
+			</fields>
+		</form>
+		<!--Pagination-->
+		<pagination>
+			<msg var="numero">
+				<string lang="fr" value="Episode n°"/>
+			</msg>
+			<!--<msg var="table-th-nom">
+				<string lang="fr" value="Nom"/>
+			</msg>-->
+		</pagination>
+		<!--View-->
+		<views>
+			<view var="numero">
+				<string lang="fr" value="Saison n°"/>
+			</view>
+			<view var="langue">
+				<string lang="fr" value="Langue"/>
+			</view>
+			<view var="date">
+				<string lang="fr" value="Date de sortie"/>
+			</view>
+			<view var="resume">
+				<string lang="fr" value="Résumé"/>
+			</view>
+			<view var="nbrEpisodes">
+				<string lang="fr" value="Nombre d'épisodes"/>
+			</view>
+			<view var="title-info-gen">
+				<string lang="fr" value="Informations générales"/>
+			</view>
+			<view var="title-info-episodes">
+				<string lang="fr" value="Episodes"/>
+			</view>
+			<view var="default-saison-empty">
+				<string lang="fr" value="Aucun episode disponible pour cette saison"/>
+			</view>
+		</views>
+		<!--Css-->
+		<css src="/Css/saison-default.css"/>
+	</action>
+	<action name="show">
+		<pagination>
+			<msg var="default-related-empty">
+				<string lang="fr" value="Aucun épisode lié"/>
+			</msg>
+		</pagination>
+	</action>
+</module>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module name="ebook">
+	<!--Index-->
+	<action name="index">
+		<menus>
+			<nav var="topEbookIndexNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topEbookIndexNav-gestion">
+				<string lang="fr" value="Mes ebooks"/>
+			</nav>
+		</menus>
+	</action>
+	
+	<!--Gestion-->
+	<action name="gestion">
+		<menus>
+			<nav var="topEbookGestionNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topEbookGestionNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+		</menus>
+	</action>
+	
+	<!--Delete-->
+	<action name="delete">
+		<!--Message-->
+		<flashs>
+			<flash var="sucessful-delete">
+				<string lang="fr" value="Suppression effectuée"/>
+			</flash>
+		</flashs>
+	</action>
+	
+	<!--Update-->
+	<action name="update">
+		<!--Message-->
+		<flashs> 
+			<flash var="sucessful-file-update">
+				<string lang="fr" value="Document mis à jour."/>
+			</flash>
+		</flashs>
+	</action>
+
+	<!--All-->
+	<action name="all">
+		<!--JS-->
+		<js src="/Scripts/multi_file_upload.js"/>
+		
+		<!--Variables-->
+		<definitions>
+			<define var="miniature-x" value="180"/>
+			<define var="miniature-y" value="240"/>
+			
+			<define var="default-description-document" value="Ebook"/>	
+			<define var="default-description-image" value="Ebook"/>	
+			
+			<define var="index-cache-depth" value="10"/>
+			
+			<define var="mosaique-nbrObjectsPerPage" value="30"/>
+			<define var="mosaique-nbrSelectablePages" value="11"/>
+			
+			<define var="table-nbrObjectsPerPage" value="100"/>
+			<define var="table-nbrSelectablePages" value="11"/>
+			
+			<define var="related-nbrObjectsPerPage" value="10"/>
+			<define var="related-nbrSelectablePages" value="11"/>
+		</definitions>
+		<!--Message-->
+		<flashs>
+			<flash var="mysql-record-failed">
+				<string lang="fr" value="L'enregistrement a échoué, veuillez réessayer dans quelques instant 
+										; si le problème persiste veuillez contacter un administrateur "/>								
+			</flash>
+			<flash var="sucessful-record">
+				<string lang="fr" value="Enregistrement terminé"/>
+			</flash>
+			<flash var="invalid-form">
+				<string lang="fr" value="Un ou plusieurs champs invalides."/>
+			</flash>
+			<flash var="invalid-type">
+				<string lang="fr" value="Type de fichier bon supporté"/>
+			</flash>
+			<flash var="access-denied">
+				<string lang="fr" value="Vous n'avez pas l'authorisation de supprimer cet ebook"/>
+			</flash>
+		</flashs>
+		<!--Menu-->
+		<menus>
+			<nav var="topEbookNav-index">
+				<string lang="fr" value="Index"/>
+			</nav>
+			<nav var="topEbookNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topEbookNav-gestion">
+				<string lang="fr" value="Mes ebooks"/>
+			</nav>
+			<nav var="topEbookNav-insert">
+				<string lang="fr" value="Ajouter"/>
+			</nav>
+			<nav var="topEbookNav-update">
+				<string lang="fr" value="Modifier"/>
+			</nav>
+			<nav var="topEbookNav-delete">
+				<string lang="fr" value="Supprimer"/>
+			</nav>
+		</menus>
+		<!--Form-->
+		<form>
+			<tooltips>
+				<tooltip var="titre">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="isbn">
+					<string lang="fr" value="Nombre de 10 ou 13 chiffres sans espace"/>
+				</tooltip>
+				<tooltip var="auteur">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="genre">
+					<string lang="fr" value="Genre inconnu"/>
+				</tooltip>
+				<tooltip var="langue">
+					<string lang="fr" value="Langue inconnue"/>
+				</tooltip>
+				<tooltip var="etiquette">
+					<string lang="fr" value="Etiquette inconnue"/>
+				</tooltip>
+				<tooltip var="resume">
+					<string lang="fr" value="'Chaine de 2000 caractères max'"/>
+				</tooltip>
+				<tooltip var="date">
+					<string lang="fr" value="Doit être sous la forme AAAA-MM-DD ex:1999-12-02"/>
+				</tooltip>
+				<tooltip var="editeur">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="serie">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+				<tooltip var="file">
+					<string lang="fr" value="Seul les documents sont autorisées"/>
+				</tooltip>
+				<tooltip var="miniature">
+					<string lang="fr" value="Seul les images sont autorisées"/>
+				</tooltip>
+				<tooltip var="recherche">
+					<string lang="fr" value="Chaine de 256 caractères max"/>
+				</tooltip>
+			</tooltips>
+			<fields>
+			<field var="titre">
+				<string lang="fr" value="Titre :"/>
+			</field>
+			<field var="isbn">
+				<string lang="fr" value="ISBN :"/>
+			</field>
+			<field var="auteur">
+				<string lang="fr" value="Auteur :"/>
+			</field>
+			<field var="genre">
+				<string lang="fr" value="Genre :"/>
+			</field>
+			<field var="langue">
+				<string lang="fr" value="Langue :"/>
+			</field>
+			<field var="etiquette">
+				<string lang="fr" value="Etiquette :"/>
+			</field>
+			<field var="resume">
+				<string lang="fr" value="Résumé :"/>
+			</field>
+			<field var="date">
+				<string lang="fr" value="Date de parution :"/>
+			</field>
+			<field var="editeur">
+				<string lang="fr" value="Editeur :"/>
+			</field>
+			<field var="serie">
+				<string lang="fr" value="Serie :"/>
+			</field>
+			<field var="file">
+				<string lang="fr" value="Fichier :"/>
+			</field>
+			<field var="miniature">
+				<string lang="fr" value="Miniature :"/>
+			</field>
+			<field var="recherche">
+				<string lang="fr" value="Rechercher :"/>
+			</field>
+			<field var="order">
+				<string lang="fr" value="Trier par :"/>
+			</field>
+			<field var="option-order-default">
+				<string lang="fr" value="date d'ajout"/>
+			</field>
+			<field var="option-order-date">
+				<string lang="fr" value="date de parution"/>
+			</field>
+			<field var="option-order-langue">
+				<string lang="fr" value="langue"/>
+			</field>
+			<field var="option-order-titre">
+				<string lang="fr" value="titre"/>
+			</field>
+			<field var="size">
+				<string lang="fr" value="Size : "/>
+			</field>
+			<field var="type">
+				<string lang="fr" value="Type : "/>
+			</field>
+			<field var="md5">
+				<string lang="fr" value="Md5 : "/>
+			</field>
+			<field var="sha512">
+				<string lang="fr" value="Sha512 : "/>
+			</field>
+		</fields>
+		</form>
+		<!--Pagination-->
+		<pagination>
+			<msg var="default-search-empty">
+				<string lang="fr" value="Aucun résultat ne correspond à votre recherche"/>
+			</msg>
+			<msg var="table-th-titre">
+				<string lang="fr" value="Titre"/>
+			</msg>
+			<msg var="table-th-auteur">
+				<string lang="fr" value="auteur"/>
+			</msg>
+			<msg var="table-th-genre">
+				<string lang="fr" value="Genre"/>
+			</msg>
+			<msg var="table-th-langue">
+				<string lang="fr" value="Langue"/>
+			</msg>
+			<msg var="table-th-etiquette">
+				<string lang="fr" value="Etiquette"/>
+			</msg>
+			<msg var="table-th-resume">
+				<string lang="fr" value="Résumé"/>
+			</msg>
+			<msg var="table-th-showlink">
+				<string lang="fr" value="Lien"/>
+			</msg>
+		</pagination>
+		<!--View-->
+		<views>
+			<view var="size">
+				<string lang="fr" value="Poids"/>
+			</view>
+			<view var="format">
+				<string lang="fr" value="Format"/>
+			</view>
+			<view var="isbn">
+				<string lang="fr" value="ISBN"/>
+			</view>
+			<view var="auteur">
+				<string lang="fr" value="Auteur"/>
+			</view>
+			<view var="editeur">
+				<string lang="fr" value="Editeur"/>
+			</view>
+			<view var="genre">
+				<string lang="fr" value="Genre"/>
+			</view>
+			<view var="langue">
+				<string lang="fr" value="Langue"/>
+			</view>
+			<view var="etiquette">
+				<string lang="fr" value="Etiquette"/>
+			</view>
+			<view var="date">
+				<string lang="fr" value="Date de parution"/>
+			</view>
+			<view var="serie">
+				<string lang="fr" value="Serie"/>
+			</view>
+			<view var="resume">
+				<string lang="fr" value="Résumé"/>
+			</view>
+			<view var="title-info-gen">
+				<string lang="fr" value="Informations générales"/>
+			</view>
+			<view var="title-info-file">
+				<string lang="fr" value="Informations relatives aux fichiers"/>
+			</view>
+			<view var="default-document-empty">
+				<string lang="fr" value="Aucune document disponible pour cet ebook"/>
+			</view>
+			<view var="title-related-ebook">
+				<string lang="fr" value="Ebooks similaires"/>
+			</view>
+		</views>
+		<!--CSS-->
+		<css src="/Css/ebook-default.css"/>
+	</action>
+	
+	<action name="show">
+		<pagination>
+			<msg var="default-related-empty">
+				<string lang="fr" value="Aucun ebook lié"/>
+			</msg>
+		</pagination>
+	</action>
+</module>
