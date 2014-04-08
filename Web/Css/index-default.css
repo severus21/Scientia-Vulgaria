@@ -1,0 +1,21 @@
+/*
+	Index Module Default CSS
+*/
+	#presentation{
+		font-size: 0.9em;
+		padding:10px;
+	}
+	
+	#presentation h4, h5, h6{
+		font-size: 1em;
+	}
+	
+	#changelog{
+		float:right;
+		margin-left:10px;
+		margin-bottom: 5px;
+		padding:5px;
+		width:35%;
+		font-size: 0.8em;
+		border: 1px solid black;
+	}

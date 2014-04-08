@@ -1,0 +1,381 @@
+/*
+	Frontend Application Default CSS
+*/
+/*
+ *	General
+ */ 
+	body{
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    
+    .toolTip{
+        display: none;
+        border: 2px solid red;
+        color: red;
+        border-radius: 5px;
+    }
+    .left{
+        float: left;
+        border-right: 1px solid black; 
+    }
+    .right{
+        float: right;
+        border-left: 1px solid black; 
+    }
+    
+    
+    
+/*
+ * 	Header
+ */
+    header{
+        height: 200px;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+    
+    #mainLogo{
+		float : left;
+		margin-top: 10px;
+		margin-left : 18%;
+		height : 180px;
+		width: 356px;	
+    }
+    
+    #mainTitle{
+		display: block;
+		width: 400px;
+		
+		float: left;
+		margin-left:30px;
+		margin-top: 100px;
+		
+		font-family: "impact", "arial";
+		font-size: 2em;
+		text-decoration: underline;
+		
+    }
+    
+    #flash{
+		float: right;
+		border-top : 1px solid red;
+		font-size: 1.5em;
+		color: red;
+		margin-bottom : 5px;
+		margin-right : 5px;
+    }
+    
+    
+    
+		
+/*
+ * MainLeft
+ */
+ 
+	#mainLeft{
+		width : 180px;
+		float: left;
+	}
+ 
+ 
+/*
+ *    Content
+ */
+    #content{
+		margin-left : 190px;
+		margin-top: 5px;	
+    }  
+
+/*
+    Nav
+*/
+    /*
+        Top Main Nav
+    */
+    #topMainNav{
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 30px;
+        border: 1px black solid;
+        color: white;
+        background-color: grey;
+    }
+    
+    #topMainNav a{
+        color: white;
+    }
+    
+    #topMainNav ul{
+		margin:0px;
+		padding:0px;
+        list-style:none;
+        text-align:center;
+    }
+    #topMainNav li{
+        display:block;
+        height: 30px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+   
+    #topMainNav li:hover{
+        background-color: silver;
+    }
+	
+	/*
+        Main Left Nav
+    */
+		#leftMainNav{
+            border-radius: 10px; 
+            border: 1px black solid; 
+            margin-top: 5px;
+            margin-left:0px;
+			padding-left:0px;
+            width : 150px;
+            overflow:hidden;
+            
+        }
+        
+        #leftMainNav ul{
+			padding-left:0px;
+			list-style:none;
+			text-align:center;
+        }
+        
+        #leftMainNav ul ul{
+			padding-left:0px;
+			list-style:none;
+			text-align:center;
+			position:relative;
+			display:none;
+			
+        }
+        
+        #leftMainNav ul li:last-child{
+			border-bottom: 0px solid black;
+        }
+        
+        #leftMainNav li{
+			display:block;
+			position:relative;
+			cursor:pointer;
+			border-bottom: 1px solid black;
+        }
+        
+        #leftMainNav li li{
+			border-bottom: 0px solid black;
+        }
+        
+        #leftMainNav li:hover>ul{
+			display:block;
+        }
+        
+        #leftMainNav a{
+            text-decoration:none;
+            color:blue;
+        }
+        
+        #leftMainNav a:hover{
+            display:block; 
+            background-color:silver;
+        }
+        
+
+                /*
+         * Secondary Top Nav
+         */
+         
+         #secondaryTop{
+			height: 32px;
+			margin-bottom:10px;
+			margin-top: 5px;
+			
+			
+		}
+		
+		.secondaryTopNav{
+			height: 30px;
+			border: 1px black solid;
+			
+			float: left;
+			color: white;
+			background-color: grey;
+		}
+		
+		.secondaryTopNav a{
+			color: white;
+		}
+		
+		.secondaryTopNav ul{
+			margin:0px;
+			padding:0px;
+			list-style:none;
+			text-align:center;
+		}
+		
+		.secondaryTopNav li{
+			display:block;
+			height: 30px;
+			padding-right: 15px;
+			padding-left: 15px;
+			float: left;
+			border-right: 1px solid black; 
+		}
+		
+		.secondaryTopNav li:hover{
+			background-color: silver;
+			display:block;
+			z-index: 2;
+			position:relative;
+			border: 1px solid black; 
+		}
+		
+		.secondaryTopNav .form:hover{
+			background-color: silver;
+			display:block;
+			height:500%;
+			z-index: 2;
+			position:relative;
+			border: 1px solid black; 
+		}
+		
+		.secondaryTopNav select, .secondaryTopNav label{
+			display:none;
+		}
+		.secondaryTopNav .form:hover select{
+			display:block;
+		}
+		.secondaryTopNav .form:hover label{
+			display:block;
+			float:left;
+			color:black;
+		}
+		
+            
+		#secondary_content{
+			margin-top:10px;
+			float:left;
+		}
+            
+		/*
+            Formulaire
+        */
+            /*#content #form_insert  #info_file div{
+                float: left;
+                width: 131px;
+            }
+            
+            #content #form_update  #info_file div{
+                float: left;
+                width: 131px;
+            }*/
+        
+        /*
+            search_area
+        */
+            /*#content #search_area{
+                border: 1px solid black;
+                padding: 5px;
+            }
+            
+            #content #search_area input,select{
+                margin-right: 15px ;
+                margin-top: 5px;
+            }*/
+        /*
+            liste_objets
+        */
+           /* #content #liste_objets td{
+                font-weight: normal;
+            }
+            
+            #content #liste_objets{
+                border: 1px solid black;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            
+            #content #liste_objets th{
+                border-bottom: 1px solid black;
+            }*/
+            
+	/*
+	 * Pagination
+	 */	
+		.pagination{	
+		}
+		
+		.paginationHeader{
+			height: 32px;
+		}
+		
+		.paginationHeaderNav{
+			display:block;
+			height: 30px;
+			border: 1px black solid;
+			
+			float: left;
+			
+			color: white;
+			background-color: grey;
+		}
+		
+		.paginationHeader a{
+			color: white;
+		}
+		
+		.paginationHeader ul{
+			margin:0px;
+			padding:0px;
+			list-style:none;
+			text-align:center;
+		}
+		
+		.paginationHeader li{
+			display:block;
+			height: 30px;
+			padding-right: 15px;
+			padding-left: 15px;
+			float: left;
+			border-right: 1px solid black; 
+		}
+		
+		.paginationContent{
+			margin-top : 10px;
+		}
+		
+		/*
+		 * Tesselle
+		 */
+			section[class$="tesselle"]{
+				white-space: normal;
+				word-wrap: break-word;
+			}
+		
+		/*
+		 * Table
+		 */	
+			.paginationContent table{
+				border : 1px solid black;
+			}
+			
+			.paginationContent thead th{
+				border-bottom : 5px solid black;
+			}
+			
+			.paginationContent tfoot th{
+				border-top : 1px solid black;
+			}
+	/*
+	 * Pub
+	 */
+		#leftMainPub{
+			width:160px;
+			height:600px;
+			margin-top:20px;
+			/*border: 1px solid black;*/
+		}

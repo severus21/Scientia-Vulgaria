@@ -1,0 +1,132 @@
+/*
+ * User Module Default Css
+ */	
+	form{
+		border : 1px solid black;
+		border-radius:5px;
+		padding : 5px;
+	}
+ 
+	/*
+	 * Secondary Top Nav
+	 */
+		#topUserGestionNav{
+			background-color:white;
+			border: none;
+		}
+		
+		
+		#topUserGestionNav  ul, #topUserGestionNav ul ul{
+			padding:0;
+			margin:0;
+			list-style:none;
+			text-align:center;
+		}
+		#topUserGestionNav ul li{
+			display:inline-block;
+			position:relative;
+			border-radius:8px 8px 0 0;
+		}
+		#topUserGestionNav ul ul li{
+		display:inherit;
+		-webkit-border-radius:0;
+		   -moz-border-radius:0;
+				border-radius:0;
+		}
+		#topUserGestionNav ul ul li:hover{
+		-webkit-border-radius:0;
+		   -moz-border-radius:0;
+				border-radius:0;
+		}
+		#topUserGestionNav ul ul li:last-child{
+		-webkit-border-radius:0 0 8px 8px;
+		   -moz-border-radius:0 0 8px 8px;
+				border-radius:0 0 8px 8px;
+		}
+		#topUserGestionNav ul ul{
+		position:absolute;
+		max-height:0;
+		width:100%;
+		overflow:hidden;
+		-moz-transition: .8s all .3s;
+		-webkit-transition: .8s all .3s;
+		-o-transition: .8s all .3s;
+		-ms-transition: .8s all .3s;
+		transition: .8s all .3s;
+		}
+		#topUserGestionNav ul li:hover ul{
+		max-height:15em;
+		}
+		/* background des liens menus */
+		#topUserGestionNav ul li:first-child{
+		background:-webkit-gradient(linear,left top,left bottom,from(#65537A),to(#2A2333));
+		background:-webkit-linear-gradient(top, #65537A, #2A2333);
+		background:   -moz-linear-gradient(top, #65537A, #2A2333);
+		background:     -o-linear-gradient(top, #65537A, #2A2333);
+		background:        linear-gradient(top, #65537A, #2A2333);
+		}
+		#topUserGestionNav ul li:nth-child(2){
+		background:-webkit-gradient(linear,left top,left bottom,from(#729EBF),to(#333A40));
+		background:-webkit-linear-gradient(top, #729EBF, #333A40);
+		background:   -moz-linear-gradient(top, #729EBF, #333A40);
+		background:     -o-linear-gradient(top, #729EBF, #333A40);
+		background:        linear-gradient(top, #729EBF, #333A40);
+		}
+		#topUserGestionNav ul li:nth-child(3){
+		background:-webkit-gradient(linear,left top,left bottom,from(#F6AD1A),to(#9F391A));
+		background:-webkit-linear-gradient(top, #F6AD1A, #9F391A);
+		background:   -moz-linear-gradient(top, #F6AD1A, #9F391A);
+		background:     -o-linear-gradient(top, #F6AD1A, #9F391A);
+		background:        linear-gradient(top, #F6AD1A, #9F391A);
+		}
+		#topUserGestionNav ul li:last-child{
+		background:-webkit-gradient(linear,left top,left bottom,from(#CFFF6A),to(#677F35));
+		background:-webkit-linear-gradient(top, #CFFF6A, #677F35);
+		background:   -moz-linear-gradient(top, #CFFF6A, #677F35);
+		background:     -o-linear-gradient(top, #CFFF6A, #677F35);
+		background:        linear-gradient(top, #CFFF6A, #677F35);
+		}
+		/* background des liens sous menus */
+		#topUserGestionNav ul li:first-child li{
+		background:#2A2333;
+		}
+		#topUserGestionNav ul li:nth-child(2) li{
+		background:#333A40;
+		}
+		#topUserGestionNav ul li:nth-child(3) li{
+		background:#9F391A;
+		}
+		#topUserGestionNav ul li:last-child li{
+		background:#677F35;
+		}
+		/* background des liens menus et sous menus au survol */
+		#topUserGestionNav ul li:first-child:hover, #topUserGestionNav ul li:first-child li:hover{
+		background:#65537A;
+		}
+		#topUserGestionNav ul li:nth-child(2):hover, #topUserGestionNav ul li:nth-child(2) li:hover{
+		background:#729EBF;
+		}
+		#topUserGestionNav ul li:nth-child(3):hover, #topUserGestionNav ul li:nth-child(3) li:hover{
+		background:#F6AD1A;
+		}
+		#topUserGestionNav ul li:last-child:hover, #topUserGestionNav ul li:last-child li:hover{
+		background:#CFFF6A;
+		}
+		/* les a href */
+		#topUserGestionNav ul a{
+		text-decoration:none;
+		display:block;
+		padding:8px 32px;
+		color:#fff;
+		font-family:arial;
+		}
+		#topUserGestionNav ul ul a{
+		padding:8px 0;
+		}
+		#topUserGestionNav ul li:hover li a{
+		color:#fff;
+		text-transform:inherit;
+		}
+		#topUserGestionNav ul li:hover a, #topUserGestionNav ul li li:hover a{
+		color:#000;
+		}

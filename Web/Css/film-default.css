@@ -1,0 +1,70 @@
+/*
+	Film Module Default CSS
+*/
+
+/*
+ * Pagination
+ */
+	/*
+	 * Mosaïque
+	 */
+		.film_tesselle{
+			float:left;
+			width : 200px;
+			height :400px;
+			
+			padding-left:20px;
+			padding-right:20px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+		
+			border : 1px solid black;
+		}
+		
+		.film_tesselle .title{
+			margin-left: 20px;
+			margin-bottom: 0px;
+			margin-top: 0px;
+			
+			color :blue;
+			font-size: 1.1em;
+			text-decoration: underline;
+			
+		}
+		
+		.film_tesselle .miniature{
+			margin-bottom: 10px;
+		}
+		
+		.film_tesselle .categorie{
+			float: left;
+			
+			margin-top:0px;
+			margin-bottom:Opx;
+		}
+		
+		.film_tesselle .langue{	
+			float: right;
+			
+			margin-top:0px;
+			margin-bottom:Opx;
+			
+			font-weight:normal;
+		}
+		
+		.film_tesselle .newline{
+			width : 200px;
+			float:left;
+			height : 1px;
+		}
+		
+		.film_tesselle .saga{
+			float :left;
+
+			margin-top:0px;
+			margin-right: 10px;
+			margin-bottom:Opx;
+			 
+			font-weight:normal;
+			font-size:0.8em;
+		}

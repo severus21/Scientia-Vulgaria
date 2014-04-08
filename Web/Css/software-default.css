@@ -1,0 +1,86 @@
+/*
+	Software Module Default CSS
+*/
+/*
+ * Pagination
+ */
+	/*
+	 * Mosaïque
+	 */
+		.software_tesselle{
+			float:left;
+			width : 200px;
+			height :400px;
+			
+			padding-left:20px;
+			padding-right:20px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+		
+			border : 1px solid black;
+		}
+		
+		.software_tesselle .titre{
+			margin-left: 20px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			
+			color :blue;
+			font-size: 1.1em;
+			text-decoration: underline;
+		}
+		
+		.software_tesselle .miniature{
+			margin-bottom:10px;
+		}
+		
+		.software_tesselle .developpeur{
+			float: left;
+			
+			margin-top:0px;
+			margin-bottom:Opx;
+		}
+		.software_tesselle .langue{
+			float: right;
+			
+			margin-top:0px;
+			margin-bottom:Opx;
+			
+			font-weight:normal;
+		}
+		
+		.software_tesselle .newline{
+			width : 200px;
+			float:left;
+			height : 1px;
+		}
+		
+		.software_tesselle .categorie{
+			float :left;
+
+			margin-top:0px;
+			margin-right: 10px;
+			margin-bottom:Opx;
+			 
+			font-weight:normal;
+			font-size:0.6em;
+		}
+		
+		.software_tesselle .categorie:hover{
+			font-size: 1em;
+		}
+		
+		.software_tesselle .os{
+			float :right;
+
+			margin-top:0px;
+			margin-right: 0px;
+			margin-bottom:Opx;
+			 
+			font-weight:normal;
+			font-size:0.6em;
+		}
+		
+		.software_tesselle .os:hover{
+			font-size:1em;
+		}

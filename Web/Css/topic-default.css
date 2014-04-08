@@ -1,0 +1,37 @@
+/*
+	Topic Module Default CSS
+*/
+	/*
+	 * Pagination
+	 */
+		.post_tesselle{
+			border-bottom : 1px solid black;
+		}
+
+		.post_tesselle .headerShowPost ul{
+			margin:0px;
+			padding:0px;
+			list-style:none;
+			text-align:center;
+			font-size:0.6em;
+		}
+		
+		.post_tesselle .headerShowPost li{
+			display:block;
+			height: 20px;
+			padding-right: 5px;
+			padding-left: 5px;
+			float: left;
+		}
+		
+		.post_tesselle .user_info{
+			word-wrap: break-word;
+			width: 100px;	
+			display: block;
+			float: left;
+		}
+		.post_tesselle .text{
+			word-wrap: break-word;
+			margin-left: 100px;
+			
+		}

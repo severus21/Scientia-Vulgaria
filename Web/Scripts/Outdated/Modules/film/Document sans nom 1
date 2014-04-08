@@ -1,0 +1,51 @@
+formTraitement.form.addEventListener('submit', function (event){
+	var xhr = new XMLHttpRequest();
+	var formData=new FormData();
+	var progress=document.getElementById('progress');
+
+	
+	formData.append('nom', checkInputs.getInput('nom').value);
+	formData.append('fichier', checkInputs.getInput('fichier').value);
+	formData.append('formatAudio', checkInputs.getInput('formatAudio').value);
+	formData.append('formatVideo', checkInputs.getInput('formatVideo').value);
+	formData.append('qualite', checkInputs.getInput('qualite').value);
+	formData.append('createur', checkInputs.getInput('createur').value);
+
+    	xhr.open('POST', 'insert');
+
+   	 xhr.upload.onprogress = function(e) {
+        	progress.value = e.loaded;
+        	progress.max = e.total;
+    	};
+    
+    	xhr.onload = function() {
+       	 alert('Upload terminé !');
+    	};
+   	xhr.send(form);
+	event.preventDefault();
+}	
+
+var progress= "function progress(){"+
+	"var xhr = new XMLHttpRequest();"+
+	"var formData=new FormData();"+
+	"var progress=document.getElementById('progress');"+
+"alert('hello1');"+
+	"formData.append('nom', document.getElementById('nom').value);"+
+	"formData.append('fichier', document.getElementById('fichier').value);"+
+	"formData.append('formatAudio', document.getElementById('formatAudio').value);"+
+	"formData.append('formatVideo', document.getElementById('formatVideo').value);"+
+	"formData.append('qualite', document.getElementById('qualite').value);"+
+	"formData.append('createur', document.getElementById('createur').value);"+
+	"formData.append('miniture', document.getElementById('miniture').value);"+
+	"formData.append('description', document.getElementById('description').value);"+
+    	"xhr.open('POST', 'insert');"+
+   	"xhr.upload.onprogress = function(e) {"+
+      	 	"progress.value = e.loaded;"+
+        	"progress.max = e.total;"+
+    	"};"+
+    	"xhr.onload = function() {"+
+       	 	"alert('Upload terminé !');"+
+    	"};"+
+   	"xhr.send(form);"+
+	"event.preventDefault();"+
+"}";

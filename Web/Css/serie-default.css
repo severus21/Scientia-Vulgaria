@@ -1,0 +1,43 @@
+/*
+	Serie Module Default CSS
+*/
+
+/*
+ * Pagination
+ */
+	/*
+	 * Mosaïque
+	 */
+		.serie_tesselle{
+			float:left;
+			width : 200px;
+			height :400px;
+			
+			padding-left:20px;
+			padding-right:20px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+		
+			border : 1px solid black;
+		}
+		
+		.serie_tesselle .title{
+			margin-left: 20px;
+			margin-bottom: 0px;
+			margin-top: 0px;
+			
+			color :blue;
+			font-size: 1.1em;
+			text-decoration: underline;
+			
+		}
+		
+		.serie_tesselle .miniature{
+			margin-bottom: 10px;
+		}
+		
+		.serie_tesselle .newline{
+			width : 200px;
+			float:left;
+			height : 1px;
+		}

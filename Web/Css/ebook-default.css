@@ -1,0 +1,88 @@
+/*
+	Ebook Module Default CSS
+*/
+
+/*
+ * Pagination
+ */
+	/*
+	 * Mosaïque
+	 */
+		.ebook_tesselle{
+			float:left;
+			width : 200px;
+			height :400px;
+			
+			padding-left:20px;
+			padding-right:20px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+		
+			border : 1px solid black;
+		}
+		
+		.ebook_tesselle .titre{
+			margin-left: 20px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			
+			color :blue;
+			font-size: 1.1em;
+			text-decoration: underline;
+		}
+		
+		.ebook_tesselle .miniature{
+			margin-bottom:10px;
+		}
+		
+		.ebook_tesselle .auteur{
+			float: left;
+			
+			margin-top:0px;
+			margin-bottom:Opx;
+		}
+		
+		.ebook_tesselle .langue{
+			float: right;
+			
+			margin-top:0px;
+			margin-bottom:Opx;
+			
+			font-weight:normal;
+		}
+		
+		.ebook_tesselle .newline{
+			width : 200px;
+			float:left;
+			height : 1px;
+		}
+		
+		.ebook_tesselle .genre{
+			float :left;
+
+			margin-top:0px;
+			margin-right: 10px;
+			margin-bottom:Opx;
+			 
+			font-weight:normal;
+			font-size:0.6em;
+		}
+		
+		.ebook_tesselle .genre:hover{
+			font-size: 1em;
+		}
+		
+		.ebook_tesselle .etiquette{
+			float :right;
+
+			margin-top:0px;
+			margin-right: 0px;
+			margin-bottom:Opx;
+			 
+			font-weight:normal;
+			font-size:0.6em;
+		}
+		
+		.ebook_tesselle .etiquette:hover{
+			font-size: 1em;
+		}

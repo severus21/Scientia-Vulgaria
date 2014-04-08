@@ -1,0 +1,44 @@
+/*
+	Frontend Application Default CSS
+*/
+/*
+ *	General
+ */
+	.forum_categorie{
+		border: 1px solid black;
+		float: left;
+		margin : 10px;
+	}
+	
+	.forum_categorie_content{
+		margin-top: 1px;
+	}
+	
+	.forum{
+		width : 300px;
+		height : 100px;
+		border: 1px solid black;
+		
+		margin: 5px;
+		padding:5px;
+		float: left;
+	}
+
+	.forum p{
+		font-size: 0.85em;
+	}
+	
+	.forum p:hover{
+		font-size: 1em;
+	}
+	
+	.forum_info_sup{
+		font-size: 0.7em;
+		border-top : 1px solid black;
+		width:290px;
+		margin-bottom:0px;
+	}
+	
+	.forum_info_sup:hover{
+		font-size:0.9em;
+	}
