@@ -1,19 +1,6 @@
 Scientia-Vulgaria
 =================
 
-Les dossiers de scripts : Web/Scripts c'est plus ou moins le bordel aucune orgnisation jsute le minimun pr que ça fct (ie je ne supporte pas je JS)
-Evite de regarder le fichier Sort.php ... l'implementation des tris laisse à désirer tjs pas réécrit.
-
-Pour info : 
-	Le dossier Web est considéré comme dossier racine par le serveur Apache, les requêtes sont redirigées par défaut sous frontend.php.
-Dans la lib tu trouve mon framwork + des bouts des appli (objet  à mon sens :) image, video etc ..).
-	Les class de torrents, tracker et de mail ne sont pas à moi(la flemme de réécrire des trucs déjà bien fait où il faut uniquement suivre des standards surtout les mails.
-
-Après il y a des bouts que j'ai oublié ... J'écrirai bientôt une specification générale de l'architecture
-
-
-Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
-
 ================
 
 1.General
@@ -26,19 +13,15 @@ Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
 	Web/
 	autoload.php
 	classMap.php
-
-	le $ devant une chaine de caractère signifie que c'est une variable(la chaine de caractère faisant office de description) à adapté suivant la situation
-	le joker * : pas de règles specifiques
-	string + string : concaténation
 	
 2.Autoloader
-	autoload.php : chargement auto des classes et cartographie des classes avec la classe ClassMap
-	classMap.php : carte des classes : tableau name=>path 	
+	autoload.php : chargement auto des classes 
+	classMap.php : tableau name=>path 	
 
 3.Web
-	A.Intro
-		Web est le dossier racine de l'application pour le serveur Apache(pr un utilisateur tout se passe comme si l'ensemble des pages qu'il visiste se situaient dans ce dossier, donc les liens(html) vers des ressources extérieures ne peuvent être traités(lien symbolique ou php).
-	B.Structure
+	A.Structure
+		Web/
+			Dossier racine de l'application pour le serveur Apache.
 		CSS/	
 			#Centralise l'ensemble des feuilles de style, leur inclusion est spécifiée dans les fichiers de config des modules et des applications
 			->$module-default.css
@@ -46,29 +29,27 @@ Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
 			->$module-$nomDuTheme.css (optionel)
 			->$app-$nomDuTheme.css (optionel)
 		Files/
-			#Centralise l'ensemble des fichiers uploader par les utilisateurs (lien symbolique vers des dossiers externes aussi)
-			->$Module/ (pour chaque module nécessitant un acces à ce dossier)
+			#Centralise l'ensemble des fichiers utilisés par les modules
+			->$Module/
 		
 		Fonts/
-			#Dossier de police peut utilisé(uniquement pour la génération de Captcha)
 		
 		Images/
-			#Image propre au design de l'application
+			#Design des applications
 			->sv.ico		
 			*
 		Scripts/
-			#JS et autres scripts, structure à définir
+			#JS et autres scripts
 	
 		Tmp/ 
-			#Fichiers temporaire propre à l'application(ie restriction au niveau des droits)
+			#Fichiers temporaires générés par les applications
 
-		$app.php  #page où sont rediriger les requêtes par le serveur apache, en fct de l'application(à modifier dans les fichiers de config d'Apache)
-		robot.txt #Instructions destinées aux bots parcourant le site(notamment les robots d'indexation)
-	
-	
+		$app.php  #pages où sont redirigées(par Apache ) les requêtes en fct de l'application(à modifier dans les fichiers de config d'Apache)
+		robot.txt
+
 4.Library
 	A.Intro
-		Regroupe les sources des différents projets open-source assemblés et le FramWork principal : Foudre
+		Regroupe les sources des différents projets externes et le corps du framework
 	
 	B.Structure
 		->Extras/
@@ -78,12 +59,12 @@ Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
 	C.Extras
 		Contient l'ensemble des librairies extérieures utilisées, les principales sont : 
 			->PHPMailer (gestion des mails)
-			->PHPTracker (tracker)
+			->PHPTracker (tracker bittorrent)
 			...
 	
 	D.Std
 		a.Description
-			Le framwork Foudre 
+			Le framwork 
 		b.Structure
 			->Core
 			->Form 
@@ -94,18 +75,18 @@ Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
 		c.Core
 			Module gérant la communication entre l'application et le client.
 		d.Form
-			Gestion des formulaires et de leur intégrité
+			Gestion des formulaires
 		e.Nav
-			Gestion de menus
+			Gestion des menus
 		f.Objects
-			Gère les Objet de type Objects(et oui, un nom très recherché :) ), ie les objets enregistrer en base de donnée par le FramWork ou par les applications filles.
+			Gère les Objet de type Objects(et oui, un nom très recherché ;) ), ie les objets enregistrés en base de donnée par le Framwork ou par les applications filles.
 		g.Pagination	
-			Affichage des objets de type Objects
+			Affichage proprement des objets de type Objects
 		h.SQL
-			Gestion des requête SQL et de leur intégrité
+			Gestion des requêtes SQL : construction automatique des requêtes en fonction de la structure des objets
 		
 	E.Models
-		Models, contient les Class héritantes de Objects et leurs classes associées
+		contient les classes héritantes de Objects et leurs classes associées
 		->Managers/
 		->Objects/ 
 		->Process/		
@@ -116,7 +97,7 @@ Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
 	A.Description
 		->Config/
 		->Modules/ 
-		->Templates/ #Contient les squelettes des pages renvoyé par l'app
+		->Templates/ #Contient les squelettes des pages renvoyées par l'app
 		->$NomApp+Application.class.php #App proprement dite, gestion des accés au modules principalement
 		->$NomApp+NavBuilder.class.php #Menu par défauts de l'app
 	B.Config
@@ -125,8 +106,3 @@ Je t'ai ajouté des notes sur la structure des modules : en partie réalisé.
 		
 	C.Modules
 		cf.modulePHP-structure
-			
-			
-
-		
-
